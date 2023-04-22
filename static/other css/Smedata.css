@@ -1,0 +1,113 @@
+body {
+    background-color: rgb(221, 231, 248);
+    width: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+.head {
+    background: white;
+    width: 100%;
+    height: 40px;
+    padding: 10px 20px 0px 20px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.home-page {
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+.home-page h5 {
+    display: inline;
+    color: #292929;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.arrow{
+    width: 10px;
+    margin-right: 3px;
+}
+.head img {
+    margin-left: 2rem;
+}
+
+main {
+    padding: 1.5rem 0 0 0;
+}
+
+.logo {
+    margin-left: 1.5rem;
+}
+
+.container-form {
+    background-color: white;
+    width: 80%;
+    margin: 150px auto;
+    padding: 3rem;
+    border-radius: 30px 30px 30px 0;
+    margin-top: 0;
+}
+
+.input-group {
+    width: 100%;
+}
+
+form {
+    width: 100%;
+}
+
+label {
+    display: block;
+    text-align: start;
+    font-size: 1.3rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    color: #0E387A;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    border: 3px solid rgba(115, 126, 145, 0.7);
+    border-radius: 10px;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+button {
+    width: 50%;
+    background-color: #0E387A;
+    color: white;
+    font-family: 'Verdana';
+    font-size: 1.1rem;
+    padding: 1rem 0;
+}
+
+#container {
+    width: 100%;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 980px) {
+    .wrapper {
+        width: 1000px;
+    }
+}

@@ -1,0 +1,214 @@
+$primary: rgb(3, 45, 112);
+$secondary: orange;
+$light: rgb(244, 246, 250);
+$info: rgb(222, 226, 230);
+
+$navbar-light-color: $primary;
+$navbar-light-hover-color: $primary;
+$navbar-light-toggler-border-color: rgba($primary, 0);
+
+$btn-focus-box-shadow: none;
+$btn-active-box-shadow: none;
+
+$card-border-width: 0;
+
+$box-shadow: 0 2px 5px rgba(152, 147, 147, 0.7);
+
+$nav-tabs-border-width: 0;
+
+$accordion-border-width: 0;
+
+$accordion-icon-color: rgba(75, 88, 109, 0.582);
+$accordion-icon-active-color: rgba(75, 88, 109, 0.582);
+
+$accordion-button-active-bg: white;
+
+$accordion-icon-width: 1.5rem;
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
+
+$input-border-width: 3px;
+$input-border-radius-lg: 10px;
+$input-border-color: rgba(115, 126, 145, 0.7);
+$input-focus-border-color: rgba(115, 126, 145, 0.7);
+$input-focus-color: black;
+$input-focus-width: 3px;
+$input-focus-box-shadow: none;
+
+$form-select-focus-box-shadow: none;
+
+$form-check-input-bg: transparent;
+
+$input-group-addon-bg: white;
+
+$modal-content-bg: rgba(255, 255, 255, 0.8);
+
+button.navbar-toggler:focus,
+button.navbar-toggler:active,
+button.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.btn:focus,
+a:focus {
+    outline: none;
+    border: none;
+}
+
+html {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.last-btn {
+    border: 3px solid $primary  !important;
+}
+
+.header img {
+    padding-top: 5rem;
+}
+
+.pricing-card-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.pricing-card-container::-webkit-scrollbar {
+    display: none;
+}
+
+.pricing-cards {
+    min-width: 470px;
+}
+
+.heading-line::before {
+    content: "";
+    width: 6rem;
+    height: 0.1rem;
+    margin: 0 auto;
+    display: block;
+    background-color: rgba(3, 45, 112, 0.304);
+}
+
+.heading-line::after {
+    content: "";
+    width: 0.2rem;
+    height: 0.2rem;
+    padding: 0.2rem;
+    border-radius: 50%;
+    margin: -0.25rem auto 3rem auto;
+    display: block;
+    background-color: $primary;
+}
+
+table,
+.tab-pane {
+    outline: none !important;
+}
+
+.th:nth-child(even),
+.td:nth-child(even) {
+    background-color: rgba(152, 164, 176, 0.4) !important;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(239, 238, 238) !important;
+}
+
+.nav-tabs-link {
+    padding: 0.5rem 0 0 0 !important;
+    margin: 0 1rem 0 1rem !important;
+}
+
+.nav-tabs-link.active,
+.nav-tabs-item.show .nav-tabs-link {
+    outline: none !important;
+    border-bottom: 2px solid rgb(3, 45, 112) !important;
+    font-weight: 700 !important;
+}
+
+.dash-nav-link {
+    background-color: transparent !important;
+    color: #495057 !important;
+}
+
+.dash-nav-link.active,
+.dash-nav-link.show .dash-nav-link {
+    outline: none !important;
+    background-color: transparent !important;
+    color: black !important;
+    border-left: 5px solid $primary  !important;
+    border-radius: 0 !important;
+}
+
+.vl {
+    border-left: 2px solid black;
+    margin-top: 0.7rem;
+    height: 24px;
+}
+
+.robot {
+    border: 2px solid $primary !important;
+    border-radius: 0 !important;
+}
+
+.profile input{
+    background-color: transparent !important;
+    border: 2px solid $primary !important;
+}
+
+//login/signup/sme data
+#email-div input,
+.first-name,
+.last-name,
+.p-number,
+.email,
+.phonenumber,
+.amount,
+#network,
+#datavalue,
+.sender,
+.recipient,
+.subject {
+    border-radius: 10px !important;
+}
+
+#passwordsignup input {
+    border-radius: 0 10px 10px 0 !important;
+}
+
+.input-group-text {
+    border-width: 3px !important;
+    border-right: 0 !important;
+    border-radius: 10px 0 0 10px !important;
+}
+
+.password-input {
+    border-left: 0 !important;
+}
+
+
+.disabledBtn {
+    border: none !important;
+    border-radius: 10px 10px 10px 0 !important;
+}
+
+.disabledBtn:focus,
+.disabledBtn:active {
+    outline: none;
+    border: none;
+}
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";

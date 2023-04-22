@@ -1,0 +1,77 @@
+{% load static %}
+{% load compress %}
+{% compress css %}
+    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
+{% endcompress %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUlk SMS</title>
+
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./other css//Smedata.css">
+    <link rel="shortcut icon" href="./images/20220607_140201.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- logo on header -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light pt-3">
+        <div class="container-fluid m-auto ms-0 ps-0">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./images/Veepay Logo Png.png" alt="">
+            </a>
+        </div>
+    </nav>
+    <div class="home-page">
+        <a href="./index.html"><img src="images/Arrow 3.png" alt="" class="arrow">
+            <h5>Back to Homepage</h5>
+        </a>
+    </div>
+    <main>
+        <h2 class="mt-5"><b>Bulk SMS</b></h2>
+        <div class="container-form">
+            <form class="" id="signup-form">
+                <div class="input-group mb-4">
+                    <label for="sender">Sender</label>
+                    <input type="text" name="text" class="form-control sender form-control-lg"
+                        placeholder="input Sender or Organization name" aria-label="sender">
+                </div>
+
+                <div class="input-group mb-4">
+                    <label for="recipient">Recipient</label>
+                    <input type="text" name="text" class="form-control recipient form-control-lg"
+                        placeholder="input Numbers or select other options" aria-label="recipient">
+                </div>
+
+                <div class="input-group mb-4">
+                    <label for="recipient">Subject</label>
+                    <input type="text" name="text" class="form-control subject form-control-lg" placeholder=""
+                        aria-label="subject">
+                </div>
+
+                <div>
+                    <label for="sms-body">SMS Body</label>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                </div>
+
+                <div id="container">
+                    <button type="submit" class="btn btn-primary btn-lg disabledBtn"><b>Send</b></button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <div class="footer row bg-light">
+                <div class="copyright py-2 bg-primary text-white text-center col-12">
+                    <p class="my-2 fst-italic" style="font-size: 14px;">&copy; 2022 Copyright. Veepay</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="./js/index.js"></script>
+</body>

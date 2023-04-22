@@ -1,0 +1,70 @@
+{% load static %}
+{% load compress %}
+{% compress css %}
+    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
+{% endcompress %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cable Subscription page</title>
+
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./other css/cabletv.css">
+</head>
+
+<body>
+    <header>
+        <a href="./index.html"> <img src="images/Veepay Logo Png.png" alt="Veepay Logo" class=logo></a>
+
+    </header>
+    <div class="home-page">
+        <a href="./index.html"><img src="images/Arrow 3.png" alt="" class="arrow">
+            <h5>Back to Homepage</h5>
+        </a>
+    </div>
+    <form class="cablesub">
+        <h2 class="big-heading">CABLE TV SUBSCRIPTION</h2>
+        <div class="container">
+            <div class="inner">
+                <select id="biller" class="form-select form-select-lg">
+                    <option value="select-biller">Select biller</option>
+                    <option value="gotv">GOtv</option>
+                    <option value="startimes">StarTimes</option>
+                    <option value="DSTV">DSTV</option>
+                    <option value="Box-DSTV">Box Office DSTV</option>
+                    <option value="SHOWMAX">SHOWMAX</option>
+                    <option value="IROKOtv">IROKOtv</option>
+                    <option value="Linda-TV">Linda Ikeji TV</option>
+                </select>
+                <select id="payment-item" class="form-select form-select-lg">
+                    <option value="payment">Payment item</option>
+                    <!--options will display here-->
+                </select>
+                <input type="Smart card number/Decoder number" name="Smart card number/Decoder number"
+                    placeholder="Smart card number/Decoder number" />
+
+                <input type="Account" name="Amount" placeholder="Amount" />
+
+                <a href="#"><button class="btn">
+                        Pay
+                    </button></a>
+            </div>
+        </div>
+
+    </form>
+
+
+    <footer class="footer">
+        <i> &copy; 2022 Copyright. Veepay</i>
+    </footer>
+
+    <script src="./js/cable tv.js"></script>
+
+</body>
+
+</html>

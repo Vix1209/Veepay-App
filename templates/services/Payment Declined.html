@@ -1,0 +1,41 @@
+{% load static %}
+{% load compress %}
+{% compress css %}
+    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
+{% endcompress %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declined</title>
+    <script src="https://kit.fontawesome.com/1f82d44a3d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./other css/Payment Decline.css">
+</head>
+<body>
+    <header>
+        <a href=""> <img src="images/Veepay Logo Png.png"
+          alt="Veepay Logo" class=logo></a>
+ 
+     </header>
+     <div class="error-section">
+        <div class="container">
+            <div class="Error-icon">
+                <img src="images/info-circle.png" alt="Error" class="icon">
+            </div>
+            <h1 style="color:#BB001B;">Error!</h1>
+            <h1>Payment Declined</h1>
+           <a href="Cable tv subscription.html"><input type="submit" value="Try Again"></a>
+
+     </div>
+    </div>
+</body>
+
+
+    <footer class="footer">
+        <p> &copy; 2022 Copyright.Veepay</p>
+       </footer>
+ 
+</html>

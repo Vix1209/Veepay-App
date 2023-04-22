@@ -1,0 +1,144 @@
+{% load static %}
+{% load compress %}
+{% compress css %}
+    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
+{% endcompress %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veepay-Sign Up</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <link rel="shortcut icon" href="./images/20220607_140201.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./other css/sign-up.css">
+
+</head>
+
+<body class="body">
+    <a class="navbar-brand" href="./index.html">
+        <img src="./images/Veepay Logo Png.png" alt="" class="mt-4">
+    </a>
+    <section class="split-screen row row-cols-2">
+        <article
+            class="right mt-4 col-7 d-flex flex-column justify-content-center align-items-center align-self-center">
+            <div class="col-12">
+                <div class="mb-1">
+                    <h2 class="text-primary text-center">Sign up for an Account</h2>
+                    <hr class="m-auto" style="width: 60px; height: 2.5px; color: rgb(1, 17, 33);">
+                </div>
+
+                <form class="pt-3 col-7 m-auto" id="signup-form" novalidate onsubmit="return validatingSignUpForm()">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-lg w-100 first-name"
+                            placeholder="First name" aria-label="first-name" aria-describedby="basic-addon1"
+                            id="validationServer01">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-lg w-100 last-name" placeholder="Last name"
+                            aria-label="last-name" aria-describedby="basic-addon2" id="validationServer02">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control form-control-lg w-100 email" placeholder="Email"
+                            aria-label="email" aria-describedby="basic-addon3" id="validationServer03">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="tel" class="form-control form-control-lg w-100 p-number" placeholder="Phone Number"
+                            aria-label="phone number" aria-describedby="basic-addon4" id="validationServer04">
+                    </div>
+                    <div class="input-group mb-3" id="passwordsignup">
+                        <span class="input-group-text" id="basic-addon5"><i class="bi bi-eye"></i></span>
+                        <input type="password" class="password-input form-control form-control-lg"
+                            placeholder="Password" aria-label="password" id="validationServer05"
+                            aria-describedby="basic-addon5" required>
+                    </div>
+                    <div class="text-center mt-5">
+                        <button type="submit" class="btn-lg w-25 btn-primary" id="modal-toggler"
+                        data-bs-target="#staticBackdrop">Sign Up</button>
+                    </div>
+                </form>
+                <div class="col-7 m-auto mt-2 text-center">
+                    <div class="d-flex mt-4 align-items-center justify-content-center">
+                        <div class="me-2"
+                            style="width: 60px; height: 2.5px; background-color: rgba(131, 160, 188, 0.9); margin-top: -1rem;">
+                        </div>
+                        <p class="d-block">Or sign in using</p>
+                        <div class="ms-2"
+                            style="width: 60px; height: 2.5px; background-color: rgba(131, 160, 188, 0.9); margin-top: -1rem;">
+                        </div>
+                    </div>
+                    <footer>
+                        <!--Social Media Icons-->
+                        <div class="d-flex justify-content-center px-5">
+                            <div class="logins-icons">
+                                <a href="">
+                                    <img src="./images/icons8-google-48.png" alt="" width="25">
+                                </a>
+                            </div>
+                            <div class="logins-icons">
+                                <a href="">
+                                    <img src="./images/facebook-svgrepo-com.svg" alt="" width="20">
+                                </a>
+                            </div>
+                            <div class="logins-icons">
+                                <a href="">
+                                    <i class="bi bi-apple h5 text-dark"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </article>
+        <article
+            class="left col-5 ps-5 mt-5 d-flex flex-column justify-content-center align-items-center align-self-center text-center pe-5">
+            <div id="error">
+                <i class="bi bi-exclamation-circle-fill text-danger me-3"></i>
+                <p class="pt-2"></p>
+            </div>
+            <div class="copy pe-5 my-auto mt-5">
+                <h5 class="h3 ps-5 mb-4">Already Signed Up?</h5>
+                <p class="ps-5"><i class="fs-5">then proceed to login to your account</i></p>
+                <div class="ps-5 mt-5">
+                    <a href="./login.html" class="btn fs-5 px-5 btn-outline-primary last-btn">Log in</a>
+                </div>
+                </secton>
+            </div>
+        </article>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <a id="modal-link" class="text-decoration-none" href="">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                        <div>
+                            <i class="bi bi-check-circle-fill text-success display-1"></i>
+                        </div>
+                        <div class="my-3">
+                            <p class="text-primary display-3 fw-bold">Sign Up Successful</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center text-dark">
+                            <p class="h5 me-1">Explore!</p>
+                            <i class="bi bi-hand-thumbs-up-fill h5"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="./js/signup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+{% load static %}
+{% load compress %}
+{% compress css %}
+    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
+{% endcompress %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./other css/Buy Airtime.css">
+    <link rel="shortcut icon" href="./images/20220607_140201.jpg" type="image/x-icon">
+    <title>Buy Airtime Page</title>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html"> <img src="images/Veepay Logo Png.png" alt="Veepay Logo" class=logo></a>
+    </header>
+    <div class="home-page">
+        <a href="./index.html"><img src="images/Arrow 3.png" alt="" class="arrow">
+            <h5>Back to Homepage</h5>
+        </a>
+    </div>
+    <h2 class="big-heading">BUY AIRTIME</h2>
+    <h5 class="sub-heading">Top up your airtime instantly</h5>
+    <form class="recharge-airtime" action="post">
+        <div class="container">
+            <div class="inner">
+                <label for="Network" class=network>Network</label>
+                <select id="Network" class="form-select form-select-lg">
+                    <option value="select ntwork">Select Network</option>
+                    <option value="mtn">MTN</option>
+                    <option value="glo">GLO</option>
+                    <option value="airtel">AIRTEL</option>
+                    <option value="9mobile">9mobile</option>
+                </select>
+
+                <label for="Phone Number" class="number">Phone Number</label>
+                <input type="Phone Number" name="Phone Number" placeholder="Phone Number" />
+                <label for="Phone number you wish to recharge">
+                    <p>Phone number you wish to recharge</p>
+                </label>
+                <label for="Amount" class="amount">Amount</label>
+                <input type="Account" name="Amount" placeholder="Amount" />
+                <label for="Minimum Airtime of N...">
+                    <p>Minimum Airtime of N100</p>
+                </label>
+
+                <a href="#"><button class="btn">
+                        Buy
+                    </button></a>
+            </div>
+        </div>
+
+    </form>
+    <div class="footer">
+        <i> &copy; 2022 Copyright. Veepay</i>
+    </div>
+
+</body>
+
+</html>

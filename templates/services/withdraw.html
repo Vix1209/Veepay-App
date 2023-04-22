@@ -1,0 +1,92 @@
+{% load static %}
+{% load compress %}
+{% compress css %}
+    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
+{% endcompress %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veepay-Fund wallet</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="./images/20220607_140201.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./other css/funds.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white navbar-light pt-3">
+        <div class="container-fluid m-auto ms-0 ps-0">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./images/Veepay Logo Png.png" alt="">
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="home-page mb-3">
+            <a href="./settings.html"><img src="images/Arrow 3.png" alt="" class="arrow">
+                <h5 class="fs-5 fw-normal">Back to Settings</h5>
+            </a>
+        </div>
+
+        <div class="pt-1">
+            <h3 class="text-center text-primary">Withdraw Funds</h3>
+            <div class="m-auto bg-white mx-5 mt-3 px-5 pt-2 pb-4" style="border-radius: 20px 20px 20px 0;">
+                <h4 class="mt-3 ms-4">Confirm Bank Details</h4>
+                <form class="row justify-content-between g-3 mx-4 pt-3">
+                    <div class="col-md-5 form-floating mb-4">
+                        <input type="text" class="form-control me-3" value="Access bank" id="floatingInputValue6">
+                        <label for="floatingInputValue6" class="ms-2">Bank Name</label>
+                    </div>
+
+                    <div class="col-md-5 form-floating">
+                        <input type="text" class="form-control me-3" value="123456789" id="floatingInputValue7">
+                        <label for="floatingInputValue7" class="ms-2">Account No.</label>
+                    </div>
+
+                    <div class="col-md-5 form-floating mb-4">
+                        <input type="text" class="form-control me-3" value="Oyetunji Peter" id="floatingInputValue8">
+                        <label for="floatingInputValue8" class="ms-2">Account Name</label>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="cardname" class="form-label">Amount</label>
+                        <input type="text" class="form-control form-control-lg" id="cardname" placeholder="N5000"
+                            value="">
+                    </div>
+
+                    <div>
+                        <label for="validationServer10">Password</label>
+                        <div class="input-group mb-3 mt-2" id="passwordsignup">
+                            <span class="input-group-text" id="basic-addon1"><i class="bi bi-eye"></i></span>
+                            <input type="password"
+                                class="password-input new-password-input form-control form-control-lg"
+                                placeholder="************" aria-label="password" id="validationServer10"
+                                aria-describedby="basic-addon1" required>
+                            <div id="validationServer10Feedback" class="invalid-feedback fs-6" style="display: none;">
+                                Incorrect password?
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center">
+                        <button class="mt-4 mb-3 btn btn-primary rounded-0"
+                            style="padding-left: 6rem; padding-right: 6rem;">Withdraw</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="copyright py-2 bg-primary text-white text-center col-12">
+        <p class="my-2 fst-italic" style="font-size: 14px;">&copy; 2022 Copyright. Veepay</p>
+    </footer>
+
+    <script src="./js/funds.js"></script>
+</body>

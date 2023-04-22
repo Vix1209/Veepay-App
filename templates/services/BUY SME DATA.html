@@ -1,0 +1,87 @@
+{% load static %}
+{% load compress %}
+{% compress css %}
+    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
+{% endcompress %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUY SME DATA PAGE</title>
+
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./other css//Smedata.css">
+    <link rel="shortcut icon" href="./images/20220607_140201.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- logo on header -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light pt-3">
+        <div class="container-fluid m-auto ms-0 ps-0">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./images/Veepay Logo Png.png" alt="">
+            </a>
+        </div>
+    </nav>
+
+    <div class="home-page">
+        <a href="./index.html"><img src="images/Arrow 3.png" alt="" class="arrow">
+            <h5>Back to Homepage</h5>
+        </a>
+    </div>
+    <main>
+        <h2 class="mt-5"><b>BUY SME DATA</b></h2>
+        <div class="container-form">
+            <form class="" id="signup-form" novalidate onsubmit="return validateSmePurchase()">
+                <div class="custom-select mb-4" style="width: 100%;">
+                    <label for="network"> Network</label>
+                    <select class="form-select form-select-lg" id="network" name="network">
+                        <option value="select-network">Select Network</option>
+                        <option value="mtn">MTN</option>
+                        <option value="glo">GLO</option>
+                        <option value="airtel">AIRTEL</option>
+                        <option value="9mobile">9MOBILE</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-4">
+                    <label for="phonenumber">Phone Number</label>
+                    <input type="tel" class="phonenumber form-control form-control-lg" placeholder="Enter Number"
+                        aria-label="phonenumber" id="validationServer01" aria-describedby="basic-addon1" required>
+                    <div id="validationServer01Feedback" class="invalid-feedback fs-5" style="display: none;">
+                        Incorrect Network Number
+                    </div>
+                </div>
+
+                <div class="input-group mb-4">
+                    <label for="datavalue"> Data Value</label>
+                    <select class="form-select form-select-lg" id="datavalue" name="datavalue">
+                        <!--Plans will display here-->
+                    </select>
+                </div>
+
+                <div class="input-group mb-5">
+                    <label for="amount">Amount</label>
+                    <input type="text" name="text" class="form-control amount form-control-lg" placeholder=""
+                        aria-label="phonenumber">
+                </div>
+
+                <div id="container">
+                    <button type="submit" class="btn btn-primary btn-lg disabledBtn"><b>Buy</b></button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <div class="footer row bg-light">
+                <div class="copyright py-2 bg-primary text-white text-center col-12">
+                    <p class="my-2 fst-italic" style="font-size: 14px;">&copy; 2022 Copyright. Veepay</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/index.js"></script>
+</body>

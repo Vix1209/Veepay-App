@@ -1,0 +1,436 @@
+{% load static %}
+{% load compress %}
+{% compress css %}
+    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
+{% endcompress %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veepay-Settings</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="./images/20220607_140201.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./other css/settings.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white navbar-light pt-3">
+        <div class="container-fluid m-auto ms-0 ps-0">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./images/Veepay Logo Png.png" alt="">
+            </a>
+        </div>
+    </nav>
+    <main>
+
+        <div class="home-page mb-3">
+            <a href="./dashboard.html"><img src="images/Arrow 3.png" alt="" class="arrow">
+                <h5>Back to Homepage</h5>
+            </a>
+        </div>
+
+        <div class="d-flex align-items-start justify-content-between">
+            <ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
+                <div>
+                    <h1 class="text-primary ms-5 mt-4">Settings</h1>
+                </div>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link ps-5 fs-5 dash-nav-link active" id="profile-tab" data-bs-toggle="tab"
+                        data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                        aria-selected="true">Profile</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link dash-nav-link ps-5 fs-5" id="about-tab" data-bs-toggle="tab"
+                        data-bs-target="#about-tab-pane" type="button" role="tab" aria-controls="about-tab-pane"
+                        aria-selected="false">About Us</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link dash-nav-link ps-5 fs-5" id="faq-tab" data-bs-toggle="tab"
+                        data-bs-target="#faq-tab-pane" type="button" role="tab" aria-controls="faq-tab-pane"
+                        aria-selected="false">FAQs</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link dash-nav-link ps-5 fs-5" id="contact-tab" data-bs-toggle="tab"
+                        data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
+                        aria-selected="false">Contact
+                        Us</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+
+                <div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel"
+                    aria-labelledby="profile-tab" tabindex="0">
+                    <div class="profile">
+                        <div class="profile1 mb-3">
+                            <div>
+                                <h4 class="text-primary mb-4">User Info</h4>
+                            </div>
+                            <div class="">
+                                <span class="bg-primary d-inline-block p-1 ms-1 rounded-circle mb-3">
+                                    <i class="bi bi-person-fill display-6 text-white"></i>
+                                </span>
+                                <i class="bi bi-camera-fill camera text-warning mt-0"></i>
+                            </div>
+                            <div class="row g-5 justify-content-start mb-4">
+                                <div class="col-5">
+                                    <div class="d-flex align-items-center me-4 form-floating">
+                                        <input type="text" class="form-control me-3" placeholder="First name"
+                                            value="Peter" id="floatingInputValue1" aria-label="First name" disabled>
+                                        <label for="floatingInputValue1">First Name</label>
+                                        <i class="bi bi-pen"></i>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="d-flex align-items-center form-floating">
+                                        <input type="text" class="form-control me-3" placeholder="Last name"
+                                            value="Oyetunji" id="floatingInputValue2" aria-label="Last name" disabled>
+                                        <label for="floatingInputValue2">Last Name</label>
+                                        <i class="bi bi-pen"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-5 justify-content-start mb-4">
+                                <div class="col-5">
+                                    <div class="d-flex align-items-center me-4 form-floating">
+                                        <input type="text" class="form-control me-3"
+                                            value="peteroyetunjiayobami@gmail.com" id="floatingInputValue3"
+                                            aria-label=" First name" disabled>
+                                        <label for="floatingInputValue3">Email address</label>
+                                        <i class="bi bi-pen"></i>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="d-flex align-items-center form-floating">
+                                        <input type="text" class="form-control me-3" aria-label="First name"
+                                            value="08140645032" id="floatingInputValue4" disabled>
+                                        <label for="floatingInputValue4">Phone No.</label>
+                                        <i class="bi bi-pen"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-5 justify-content-start mb-4">
+                                <div class="col-5">
+                                    <div class="d-flex align-items-center me-4 form-floating">
+                                        <input type="text" class="form-control me-3" aria-label="First name"
+                                            value="08140645032" id="floatingInputValue5" disabled>
+                                        <label for="floatingInputValue5">Password</label>
+                                        <i class="bi bi-pen"></i>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <button type="button" class="btn btn-primary py-2 d-inline-block rounded-lg"
+                                        style="padding-left: 5rem; padding-right: 5rem;">Update</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile1 mb-3">
+                            <div>
+                                <h4 class="text-primary mb-4">Account</h4>
+                                <p class="text-dark">Bank Details</p>
+                            </div>
+                            <div class="row g-5 justify-content-start mb-4">
+                                <div class="col-5">
+                                    <div class="d-flex align-items-center me-4 form-floating">
+                                        <input type="text" class="form-control me-3" value="Access bank"
+                                            id="floatingInputValue6" disabled>
+                                        <label for="floatingInputValue6">Bank Name</label>
+                                        <i class="bi bi-pen"></i>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="d-flex align-items-center me-4 form-floating">
+                                        <input type="text" class="form-control me-3" value="123456789"
+                                            id="floatingInputValue7" disabled>
+                                        <label for="floatingInputValue7">Account No.</label>
+                                        <i class="bi bi-pen"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-5 justify-content-start mb-4">
+                                <div class="col-5">
+                                    <div class="d-flex align-items-center me-4 form-floating">
+                                        <input type="text" class="form-control me-3" value="Oyetunji Peter"
+                                            id="floatingInputValue8" disabled>
+                                        <label for="floatingInputValue8">Account Name</label>
+                                        <i class="bi bi-pen"></i>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <button type="button" class="btn btn-primary py-2 d-inline-block rounded-lg"
+                                        style="padding-left: 5rem; padding-right: 5rem;">Update</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile1 mb-5">
+                            <div>
+                                <h4 class="text-primary mb-4">Wallet</h4>
+                                <p class="text-dark fs-5">Available Amount: <span class="text-primary h4 ms-1">N
+                                        0.00</span>
+                                </p>
+                            </div>
+
+                            <div class="d-flex justify-content-start mb-4 w-50">
+                                <a href="./funds.html" class="btn btn-primary px-5 me-5 d-inline-block rounded-lg">Fund Wallet</a>
+                                <a href="./withdraw.html"
+                                    class=" btn btn-outline-primary border-3 px-5 d-inline-block rounded-lg">Withdraw
+                                    Cash</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="about-tab-pane" role="tabpanel" aria-labelledby="about-tab" tabindex="0">
+                    <div class="container">
+                        <div class="card1">
+                            <div class=" card-body1 ">
+                                <h5 class="card-title text-primary fs-3" style="font-weight: 600;">
+                                    <b class="fw-semibold"> Veepay</b>
+                                </h5>
+                                <h6 class="card-subtitle mb-4 text-primary fs-5">
+                                    <b>(Feed your network, live better)</b>
+                                </h6>
+                                <p class="card-text fs-5">Veepay is a three in one telecommunication platform that
+                                    provide
+                                    Bulk
+                                    sms, SME data and Recharge platforms which aims to increase lifetime value and
+                                    customer
+                                    engagement through our products.
+                                </p>
+                                <p class="fs-5">Veepay intends to connect individuals with ways to pay for their
+                                    favorite
+                                    service. We hope to serve millions of customers by providing easier, faster and
+                                    secure
+                                    ways to recharge their brands.</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <div class="card-body2 ">
+                                <h5 class="card-title text-primary" style="font-weight: 600;">A BULK SMS PLATFORM</h5>
+
+                                <p class="card-text fs-5">Veepay will offers bulk sms at subsidized rate. We aspire to
+                                    be
+                                    the go
+                                    to online place for bulk sms for clients who wants to deliver messages cutting
+                                    across
+                                    different sectors.</p>
+                            </div>
+                        </div>
+                        <div class="card3 ">
+                            <div class="card-body3 ">
+                                <h5 class="card-title text-primary" style="font-weight: 600;">SME DATA PLATFORM
+                                </h5>
+
+                                <p class="card-text fs-5">Veepay plans to earn your trust in every interaction to
+                                    provide
+                                    network data at the lowest cost possible. Which will enable workflow and delight
+                                    customers.
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="card4">
+                            <div class="card-body4 ">
+                                <h5 class="card-title text-primary" style="font-weight: 600;">RECHARGE PLATFORM</h5>
+
+                                <p class="card-text fs-5">Veepay intends to be the swift way for individuals to top up
+                                    their
+                                    favorite mobile network brands and also make subscriptions for your cable TV. We
+                                    will
+                                    deliver wide adequate and effective top-ups in less than a minute. Creating a
+                                    seamless
+                                    experience for customers to manage mobile top-ups.
+                                </p>
+                                <p class="fs-5">
+                                    Further more, we also want to create an avenue for customers and users to be able to
+                                    sell airtime directly on our channel in order to solve the problem of overloaded
+                                    airtime.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="faq-tab-pane" role="tabpanel" aria-labelledby="faq-tab" tabindex="0">
+                    <div class="accordion pb-5" id="accordionExample">
+                        <div class="accordion-item">
+                            <div class="mb-3 ps-5">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button
+                                        class="accordion-button collapsed py-4 text-primary fs-5 fw-bold new-accordion"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                        aria-expanded="false" aria-controls="collapseOne">
+                                        What is Veepay
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body lead text-primary">
+                                        Veepay is a three in one telecommunication platform that provides its users with
+                                        hassle-free
+                                        experience anytime they use its product. Veepay intends to connect individuals
+                                        in
+                                        ways
+                                        to pay
+                                        for their favorite services by providing easier, faster and secure ways to
+                                        recharge
+                                        your
+                                        favorite brands.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="mb-3 ps-5">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed py-4 text-primary fs-5 fw-bold"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                        How do I use my Dashboard
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body lead text-primary">
+                                        First Login or Signup to an account, then go to the Settings Page to update your
+                                        account and Fund your wallet to be able to a Recharge or perform any transaction
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="mb-3 ps-5">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed py-4 text-primary fs-5 fw-bold"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                        aria-expanded="false" aria-controls="collapseThree">
+                                        How do I add and remove my debit card
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body lead text-primary">
+                                        Under the profile section in the settings page, click Fund wallet to add or
+                                        remove
+                                        debit card
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="mb-3 ps-5">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed py-4 text-primary fs-5 fw-bold"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                        aria-expanded="false" aria-controls="collapseFour">
+                                        What is Bulk SMS
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body lead text-primary">
+                                        BULK SMS is a service that allow sending a large number of SMS to multiple users
+                                        at
+                                        once. And you will get that service at lower rate here.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="mb-3 ps-5">
+                                <h2 class="accordion-header" id="headingfive">
+                                    <button class="accordion-button collapsed py-4 text-primary fs-5 fw-bold"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive"
+                                        aria-expanded="false" aria-controls="collapsefive">
+                                        Can I send International bulk SMS through this platform
+                                    </button>
+                                </h2>
+                                <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfive"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body lead text-primary">
+                                        For now, NO. Veepay is looking to extend its bulk SMS services internationally
+                                        and
+                                        you will be notified as soon as the service its available.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-5">
+                            <div class="mb-3 ps-5">
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed py-4 text-primary fs-5 fw-bold"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                        aria-expanded="false" aria-controls="collapseSix">
+                                        Do you have a Mobile App
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body lead text-primary">
+                                        For now, NO. We are also working towards building our Mobile Application and you
+                                        will be notified as soon as its available
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade h-100" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                    tabindex="0">
+                    <div class="main">
+                        <form class="form pb-5">
+                            <h1 class="text-primary mb-4">
+                                Get in touch</h1>
+                            </h3>
+                            <label for="name" class="fs-5"> Your Name</label>
+                            <input id="name" type="text">
+
+                            <label for="email" class="fs-5"> Your Email Address</label>
+                            <input id="email" type="email">
+
+                            <label for="yourname" class="fs-5"> Your Phone Number</label>
+                            <input id="yourname" type="tel">
+
+                            <label for="message" class="fs-5">Your Message</label>
+                            <textarea name="message" id="message" cols="20" rows="5"> </textarea>
+
+                            <input class="form-check-input robot mt-3 mx-1" type="checkbox" value=""
+                                id="flexCheckChecked">
+                            <label class="form-check-label mt-3" for="flexCheckChecked">
+                                I am not a robot
+                            </label>
+
+                            <button class="btnh mt-5 mb-5">
+                                Send
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="d-flex text-dark h5 align-items-center ms-5 mb-5" style="cursor: pointer;" href="./login.html">
+            <i class="bi bi-box-arrow-left me-2"></i>
+            <p class="mt-2">Log out</p>
+        </a>
+    </main>
+
+    <footer class="copyright py-2 bg-primary text-white text-center col-12">
+        <p class="my-2 fst-italic" style="font-size: 14px;">&copy; 2022 Copyright. Veepay</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+{% load static %}
+{% load compress %}
+{% compress css %}
+    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
+{% endcompress %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUY SME DATA PAGE</title>
+
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./other css//Smedata.css">
+    <link rel="shortcut icon" href="./images/20220607_140201.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- logo on header -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light pt-3">
+        <div class="container-fluid m-auto ms-0 ps-0">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./images/Veepay Logo Png.png" alt="">
+            </a>
+        </div>
+    </nav>
+
+    <div class="home-page">
+        <a href="./index.html"><img src="images/Arrow 3.png" alt="" class="arrow">
+            <h5>Back to Homepage</h5>
+        </a>
+    </div>
+    <main>
+        <div class="container-form mb-5 mt-3" style="padding-top: 8rem; padding-bottom: 8rem;">
+            <div class="col-4 text-center m-auto">
+                <div>
+                    <h3 class="text-primary fw-bold mb-4">SELL TO US</h3>
+                </div>
+                <div>
+                    <p class="text-primary mb-5">Did you Overload Airtime or you have an Extra Airtime you would like to
+                        sell?</p>
+                </div>
+                <div>
+                    <a href="./selltous.html" class="btn btn-primary w-100">Yes</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/index.js"></script>
+</body>
