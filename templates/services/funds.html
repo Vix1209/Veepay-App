@@ -1,8 +1,4 @@
 {% load static %}
-{% load compress %}
-{% compress css %}
-    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
-{% endcompress %}
 
 <html lang="en">
 
@@ -14,23 +10,24 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="./images/20220607_140201.jpg" type="image/x-icon">
-
-    <link rel="stylesheet" href="./css/main.min.css">
-    <link rel="stylesheet" href="./other css/funds.css">
+    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
+    <link rel="stylesheet" href="{% static 'other_css/funds.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/20220607_140201.jpg' %}" type="image/x-icon">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-white navbar-light pt-3">
         <div class="container-fluid m-auto ms-0 ps-0">
-            <a class="navbar-brand" href="./index.html">
-                <img src="./images/Veepay Logo Png.png" alt="">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="/static/images/veepay_logo_png.png" alt="">
             </a>
         </div>
     </nav>
 
     <main>
         <div class="home-page mb-3">
-            <a href="./settings.html"><img src="images/Arrow 3.png" alt="" class="arrow">
+            <a href="{% url 'settings' %}"><img src="/static/images/Arrow 3.png" alt="" class="arrow">
                 <h5 class="fw-normal">Back to Settings</h5>
             </a>
         </div>
@@ -117,8 +114,8 @@
     </main>
 
     <footer class="copyright py-2 bg-primary text-white text-center col-12">
-        <p class="my-2 fst-italic" style="font-size: 14px;">&copy; 2022 Copyright. Veepay</p>
+        <p class="my-2 fst-italic" style="font-size: 14px;">&copy; 2023 Copyright. Veepay</p>
     </footer>
 
-    <script src="./js/funds.js"></script>
+    <script src="/static/js/funds.js"></script>
 </body>

@@ -1,8 +1,4 @@
 {% load static %}
-{% load compress %}
-{% compress css %}
-    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
-{% endcompress %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,23 +9,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BUY SME DATA PAGE</title>
 
-    <link rel="stylesheet" href="./css/main.min.css">
-    <link rel="stylesheet" href="./other css//Smedata.css">
-    <link rel="shortcut icon" href="./images/20220607_140201.jpg" type="image/x-icon">
+    <link type="text/x-scss" href="{% static 'main/main.scss' %}" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="{% static 'other_css/Smedata.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/20220607_140201.jpg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
+
 </head>
 
 <body>
     <!-- logo on header -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light pt-3">
         <div class="container-fluid m-auto ms-0 ps-0">
-            <a class="navbar-brand" href="./index.html">
-                <img src="./images/Veepay Logo Png.png" alt="">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="/static/images/veepay_logo_png.png" alt="">
             </a>
         </div>
     </nav>
 
     <div class="home-page">
-        <a href="./index.html"><img src="images/Arrow 3.png" alt="" class="arrow">
+        <a href="{% url 'index' %}"><img src="/static/images/Arrow 3.png" alt="" class="arrow">
             <h5>Back to Homepage</h5>
         </a>
     </div>
@@ -44,10 +43,10 @@
                         sell?</p>
                 </div>
                 <div>
-                    <a href="./selltous.html" class="btn btn-primary w-100">Yes</a>
+                    <a href="{% url 'selltous' %}" class="btn btn-primary w-100">Yes</a>
                 </div>
             </div>
         </div>
     </main>
-    <script src="./js/index.js"></script>
+    <script src="/static/js/index.js"></script>
 </body>

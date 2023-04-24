@@ -1,8 +1,4 @@
 {% load static %}
-{% load compress %}
-{% compress css %}
-    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
-{% endcompress %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,21 +9,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cable Subscription page</title>
 
-    <link rel="stylesheet" href="./css/main.min.css">
-    <link rel="stylesheet" href="./other css/cabletv.css">
+    <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
+    <link rel="stylesheet" href="{% static 'other_css/cabletv.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/20220607_140201.jpg' %}" type="image/x-icon">
+    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
+
 </head>
 
 <body>
     <header>
-        <a href="./index.html"> <img src="images/Veepay Logo Png.png" alt="Veepay Logo" class=logo></a>
+        <a href="{% url 'index' %}"> <img src="/static/images/veepay_logo_png.png" alt="Veepay Logo" class=logo></a>
 
     </header>
     <div class="home-page">
-        <a href="./index.html"><img src="images/Arrow 3.png" alt="" class="arrow">
+        <a href="{% url 'index' %}"><img src="/static/images/Arrow 3.png" alt="" class="arrow">
             <h5>Back to Homepage</h5>
         </a>
     </div>
     <form class="cablesub">
+
+
+        <!-- connect to showmax, dstv, gotv, irokotv, linda-tv api to be able to make payments. or find an all round api that can solve it -->
         <h2 class="big-heading">CABLE TV SUBSCRIPTION</h2>
         <div class="container">
             <div class="inner">
@@ -60,10 +62,10 @@
 
 
     <footer class="footer">
-        <i> &copy; 2022 Copyright. Veepay</i>
+        <i> &copy; 2023 Copyright. Veepay</i>
     </footer>
 
-    <script src="./js/cable tv.js"></script>
+    <script src="/static/js/cable tv.js"></script>
 
 </body>
 

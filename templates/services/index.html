@@ -1,8 +1,4 @@
 {% load static %}
-{% load compress %}
-{% compress css %}
-    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
-{% endcompress %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,10 +12,15 @@
     <title>Veepay</title>
 
 
+    <link type="text/x-scss" href="{% static 'main/main.scss' %}" rel="stylesheet" media="screen">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
-    <link rel="shortcut icon" href="./images/20220607_140201.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="shortcut icon" href="{% static 'images/20220607_140201.jpg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
+
+
+
 </head>
 
 <body>
@@ -28,7 +29,7 @@
     <nav class="navbar navbar-expand-lg bg-white fixed-top navbar-light shadow-sm">
         <div class="container-fluid m-auto ms-0 ps-0">
             <a class="navbar-brand" href="./index.html">
-                <img src="./images/Veepay Logo Png.png" alt="">
+                <img src=" {% static 'images/Veepay_logo_png.png' %}" alt="">
             </a>
             <button class="navbar-toggler pe-4" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -38,8 +39,8 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 justify-content-between my-2">
                     <li class="nav-item me-5 rounded"><a class="nav-link fs-5 px-5 text-white btn btn-primary border-2"
-                            href="login.html">Login</a></li>
-                    <li class="nav-item fs-5 me-5"><a href=" ./signup.html"
+                            href="{% url 'login' %}">Login</a></li>
+                    <li class="nav-item fs-5 me-5"><a href="{% url 'signup' %}"
                             class="btn fs-5 px-5 btn-outline-primary last-btn">Sign Up</a></li>
                 </ul>
             </div>
@@ -49,7 +50,7 @@
     <!-- Header Section -->
     <div class="header ps-5 pt-5 row row-cols-2" style="background-color: rgb(221, 231, 248); height: 52rem;">
         <div class="col-6 pb-5">
-            <img src="./images/veepay_logo_new-removebg-preview (1).png" alt=""
+            <img src=" /static/images/veepay_logo_new-removebg-preview (1).png" alt=""
                 style="width: 38rem; margin-top: -4rem; margin-bottom: -7rem; margin-left: -1rem;">
             <h1 class="text-primary mb-5">Feed your Network, Live Better</h1>
             <p class="header-para fs-5 mb-4 col-10">
@@ -59,7 +60,7 @@
             </p>
             <a href="#" class="start-link btn btn-primary px-5 py-3 mb-5 fs-5">Start now</a>
         </div>
-        <img class="header-img col-6 pt-4" src="./images/image 13.png" style="object-fit: contain; margin-top: 6.5rem;" alt="">
+        <img class="header-img col-6 pt-4" src="/static/images/image 13.png" style="object-fit: contain; margin-top: 6.5rem;" alt="">
     </div>
 
 
@@ -94,7 +95,7 @@
                                 <div class="text-center">
                                     <h3 class="mb-4">SME DATA</h3>
                                     <a class="text-decoration-none btn btn-primary px-5 py-2 mb-3 mt-3 rounded text-white"
-                                        href="./BUY SME DATA.html">BUY NOW</a>
+                                        href="{% url 'SME' %}">BUY NOW</a>
                                 </div>
                             </div>
                         </div>
@@ -109,9 +110,9 @@
                                 <div class="text-center">
                                     <h3 class="mb-4">RECHARGE</h3>
                                     <a class="text-decoration-none btn btn-primary px-5 py-2 mb-1 rounded text-white border-5"
-                                        href="./Buy  Airtime.html">BUY NOW</a>
+                                        href="{% url 'airtime' %}">BUY NOW</a>
                                     <a class="text-decoration-none btn btn-outline-primary px-5 py-2 mb-2 mt-1 rounded border-3 mt-2"
-                                        href="./selltous-intro.html">SELL TO US</a>
+                                        href="{% url 'selltous_intro' %}">SELL TO US</a>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +127,7 @@
                                 <div class="text-center">
                                     <h3 class="mb-4">BULK SMS</h3>
                                     <a class="text-decoration-none btn btn-primary px-5 py-2 mb-3 mt-3 rounded text-white"
-                                        href="./Bulk SMS.html">BUY NOW</a>
+                                        href="{% url 'bulk_sms' %}">BUY NOW</a>
                                 </div>
                             </div>
                         </div>
@@ -141,7 +142,7 @@
                                 <div class="text-center">
                                     <h3 class="mb-4">CABLE TV</h3>
                                     <a class="text-decoration-none btn btn-primary px-5 py-2 mb-3 mt-3 rounded text-white"
-                                        href="./Cable tv subscription.html">BUY NOW</a>
+                                        href="{% url 'cable' %}">BUY NOW</a>
                                 </div>
                             </div>
                         </div>
@@ -152,7 +153,7 @@
         <!-- Testimonials -->
         <div class="testimonial mt-5">
             <div class="row row-cols-2 justify-content-between my-5 bg-light pt-3" style="height: 30rem;">
-                <img src="./images/Transparent (62).png" alt="" class="testimonial-img col-6 h-100"
+                <img src="/static/images/Transparent (62).png" alt="" class="testimonial-img col-6 h-100"
                     style="object-fit: contain;">
                 <div class="testimonial-text col-5 mt-5">
                     <h2 class="text-head mb-4">Why use our Platform</h2>
@@ -550,35 +551,35 @@
 
             <div class="footer-icons mb-4">
                 <a class="text-decoration-none" href="">
-                    <img src="./images/icons8-phone-64.png" alt="" width="32" class="me-4">
+                    <img src="/static/images/icons8-phone-64.png" alt="" width="32" class="me-4">
                 </a>
                 <a class="text-decoration-none" href="">
-                    <img src="./images/icons8-facebook-48.png" alt="" width="37" class="me-4">
+                    <img src="/static/images/icons8-facebook-48.png" alt="" width="37" class="me-4">
                 </a>
                 <a class="text-decoration-none" href="">
-                    <img src="./images/icons8-linkedin-circled-48.png" alt="" width="39" class="me-4">
+                    <img src="/static/images/icons8-linkedin-circled-48.png" alt="" width="39" class="me-4">
                 </a>
                 <a class="text-decoration-none" href="">
-                    <img src="./images/icons8-instagram-50.png" alt="" width="31" class="me-4">
+                    <img src="/static/images/icons8-instagram-50.png" alt="" width="31" class="me-4">
                 </a>
                 <a class="text-decoration-none" href="">
-                    <img src="./images/icons8-twitter-48.png" alt="" width="30" class="me-4">
+                    <img src="/static/images/icons8-twitter-48.png" alt="" width="30" class="me-4">
                 </a>
                 <a class="text-decoration-none" href="">
-                    <img src="./images/icons8-circled-envelope-50.png" alt="" width="35">
+                    <img src="/static/images/icons8-circled-envelope-50.png" alt="" width="35">
                 </a>
             </div>
         </div>
         <div class="copyright py-2 bg-primary text-white text-center col-12">
-            <p class="my-2 fst-italic" style="font-size: 14px;">&copy; 2022 Copyright. Veepay</p>
+            <p class="my-2 fst-italic" style="font-size: 14px;">&copy; 2023 Copyright. Veepay</p>
         </div>
     </div>
 
-    <script src="./js/index.js"></script>
+    <script src="/static/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-    <script src="//code.tidio.co/6i3blbargwpcvlgce8smcrj0bxo5pqwc.js" async></script>
+    <script src="https://code.tidio.co/6i3blbargwpcvlgce8smcrj0bxo5pqwc.js" async></script>
 
 </body>
 

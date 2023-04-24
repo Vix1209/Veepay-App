@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
 def login(request):
@@ -32,4 +32,8 @@ def OTP(request):
 def change_password(request):
     # return HttpResponse('this is the change_password page')
     return render(request, 'user/forget-password3.html')
+
+def enter_new_login_details(request):
+    # return HttpResponse('this is the change_password page')
+    return render(request, 'user/forget-password4.html')
 

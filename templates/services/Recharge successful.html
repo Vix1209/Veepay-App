@@ -1,8 +1,4 @@
 {% load static %}
-{% load compress %}
-{% compress css %}
-    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
-{% endcompress %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,23 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Successful</title>
     <script src="https://kit.fontawesome.com/1f82d44a3d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./other css/Recharge successful.css">
+    <link rel="stylesheet" href="{% static 'other_css/Recharge successful.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/20220607_140201.jpg' %}" type="image/x-icon">
+    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
+
 </head>
 <body>
     <header>
-        <a href=""> <img src="images/Veepay Logo Png.png"
+        <a href=""> <img src="/static/images/veepay_logo_png.png"
           alt="Veepay Logo" class=logo></a>
  
      </header>
      <div class="success-section">
         <div class="container">
             <div class="success-icon">
-                <img src="images/Vector success.png" alt="sucessful" class="icon">
+                <img src="/static/images/Vector success.png" alt="sucessful" class="icon">
             </div>
             <h1>Recharge successful</h1>
             <h1>Enjoy</h1>
             <h5> Go to Homepage  <a href="">
-                Yes </a> <a href="Buy  Airtime.html"> &ensp;No</h5>  
+                Yes </a> <a href="{% url 'airtime' %}"> &ensp;No</h5>  
                 </a>
             
      </div>
@@ -37,7 +36,7 @@
 
 
     <footer class="footer">
-        <p> &copy; 2022 Copyright.Veepay</p>
+        <p> &copy; 2023 Copyright.Veepay</p>
        </footer>
     
 </body>

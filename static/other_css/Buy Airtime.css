@@ -114,7 +114,7 @@ input{
 .btn{
     display: block;
     width: 50%;
-    border-radius: 10px 10px 10px 0px;
+    border-radius: 10px 10px 10px 10px;
     border: none;
     padding: 12px 38px;
     background-color:#0E387A;

@@ -1,8 +1,4 @@
 {% load static %}
-{% load compress %}
-{% compress css %}
-    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
-{% endcompress %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,18 +8,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/main.min.css">
-    <link rel="stylesheet" href="./other css/Buy Airtime.css">
-    <link rel="shortcut icon" href="./images/20220607_140201.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
+    <link rel="stylesheet" href="{% static 'other_css/Buy Airtime.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/20220607_140201.jpg' %}" type="image/x-icon">
+    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
+
     <title>Buy Airtime Page</title>
 </head>
 
 <body>
     <header>
-        <a href="./index.html"> <img src="images/Veepay Logo Png.png" alt="Veepay Logo" class=logo></a>
+        <a href="/static/index.html"> <img src="/static/images/veepay_logo_png.png" alt="Veepay Logo" class=logo></a>
     </header>
     <div class="home-page">
-        <a href="./index.html"><img src="images/Arrow 3.png" alt="" class="arrow">
+        <a href="{% url 'index' %}"><img src="/static/images/Arrow 3.png" alt="" class="arrow">
             <h5>Back to Homepage</h5>
         </a>
     </div>
@@ -52,7 +50,8 @@
                     <p>Minimum Airtime of N100</p>
                 </label>
 
-                <a href="#"><button class="btn">
+                <!-- an api will be integrated to handle the airtime purchase -->
+                <a href="#"><button class="btn"> 
                         Buy
                     </button></a>
             </div>
@@ -60,7 +59,7 @@
 
     </form>
     <div class="footer">
-        <i> &copy; 2022 Copyright. Veepay</i>
+        <i> &copy; 2023 Copyright. Veepay</i>
     </div>
 
 </body>

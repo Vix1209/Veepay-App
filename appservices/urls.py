@@ -5,10 +5,12 @@ urlpatterns = [
     path('', views.index, name='index'),
     
     path('cable/', views.cable, name='cable'),
+       
+    path('bulk-SMS/', views.bulk_sms, name='bulk_sms'),
     
     path('airtime/', views.airtime, name='airtime'),
     
-    path('SME/', views.SME, name='SME'),
+    path('SME-Data/', views.SME, name='SME'),
     
     path('fund/', views.fund, name='fund'),
     
