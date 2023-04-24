@@ -1,0 +1,242 @@
+body {
+    background-color: rgb(221, 231, 248);
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    padding-right: 4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.home-page {
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+
+.dash-nav-link {
+    font-weight: 700;
+}
+
+.home-page h5 {
+    display: inline;
+    color: #292929;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.arrow {
+    width: 10px;
+    margin-right: 3px;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    height: 100%;
+}
+
+.sidebar header {
+    font-size: 22px;
+    color: #0E387A;
+    text-align: center;
+    line-height: 60px;
+    user-select: none;
+    margin-top: 5px;
+    width: 200px;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 50px;
+    font-size: 16px;
+    color: black;
+    padding-left: 60px;
+    box-sizing: border-box;
+    transition: .4s;
+}
+
+ul li:hover a {
+    padding-left: 50px;
+}
+
+.sidebar ul a {
+    margin-right: 16px;
+}
+
+.logout_icon a {
+    padding-left: 60px;
+    position: fixed;
+    bottom: 5rem;
+}
+
+.card1 {
+    margin: 0 auto 70px auto;
+    padding: 30px;
+    justify-content: center;
+    text-align: justify;
+    justify-content: center;
+    width: 60rem;
+    background: white;
+    margin-bottom: -50px;
+}
+
+.card2 {
+    margin: 70px auto;
+    padding: 30px;
+    justify-content: center;
+    text-align: justify;
+    justify-content: center;
+    width: 60rem;
+    background: white;
+    margin-bottom: -50px;
+}
+
+.card3 {
+    margin: 70px auto;
+    padding: 30px;
+    margin-bottom: -50px;
+    justify-content: center;
+    text-align: justify;
+    justify-content: center;
+    width: 60rem;
+    background: white;
+}
+
+.card4 {
+    margin: 70px auto 4.5rem auto;
+    padding: 30px;
+    justify-content: center;
+    text-align: justify;
+    justify-content: center;
+    width: 60rem;
+    background: white;
+}
+
+.container {
+    align-items: center;
+}
+
+.container h5,
+h6 {
+    color: #0E387A;
+    font-weight: 100;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+.header {
+    background: white;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    padding-top: 5px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.logo {
+    position: static;
+}
+
+.form {
+    margin-right: 10rem;
+    padding-left: 11rem;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+    width: 100%;
+    height: 50px;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: none;
+    margin-top: 0.2rem;
+    outline: none;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#checkbox {
+    display: inline;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    margin-top: 0.7rem;
+}
+
+#message {
+    display: block;
+    resize: none;
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.2rem;
+    padding: 1rem;
+    outline: none;
+}
+
+.btnh {
+    display: block;
+    background-color: #0E387A;
+    padding: 12px 12%;
+    width: 70%;
+    border: none;
+    color: #ffff;
+    border-radius: 3px;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.btnh:hover {
+    background-color: rgba(4, 56, 122, 0.9);
+}
+
+.accordion {
+    width: 60rem;
+    margin-top: 2rem;
+}
+
+.profile {
+    width: 64rem;
+}
+
+.profile1 {
+    background-color: white;
+    padding: 2.5rem;
+}
+
+.camera {
+    position: absolute;
+    left: 23rem;
+}
+
+@media screen and (min-width: 980px) {
+    .wrapper {
+        width: 980px;
+    }
+}

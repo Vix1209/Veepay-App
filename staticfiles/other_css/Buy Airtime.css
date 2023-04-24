@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+ --blue:#0E387A;
+ --white:#ffff;
+ --black: #000000;
+ --bg:#CFD7E4;
+}
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Montserrat' , sans-serif;
+}
+body{
+    background-color:rgb(221, 231, 248);
+}
+header {
+    background-color:#ffff;
+    padding-top: 7px;
+}
+.logo{
+    padding-top:0.5rem;
+    padding-bottom:0.5rem
+}
+.home-page{
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+.home-page h5{
+    display: inline;
+    color: #292929;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.arrow{
+    width: 10px;
+    margin-right: 3px;
+}
+.big-heading {
+    text-align:center;
+    color:#0E387A;
+    font-weight: 700;
+    padding-top: 12px;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+.sub-heading{
+    text-align:center;
+    margin-top: 1rem;
+    color: var(--blue);
+    font-size:16px;
+}
+.recharge-airtime{
+    max-width:70%;
+    margin:1rem auto;
+    min-height: 100vh;
+}
+.container{
+    margin-top: 0.5rem;
+    background-color:#ffff;
+    padding:4.5rem;
+    border-radius: 40px 40px 40px 0;
+
+}
+#Network{
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size:16px;
+    color:#000000;
+    font-weight:500;
+    border: 3px solid rgba(115, 126, 145, 0.7);
+    border-radius: 10px;
+    outline: none;
+    padding-left: 1rem;
+}
+label{
+    display: block;
+}
+label p{
+    font-size:14px;
+    padding-top: 5px;
+    color:#0944a4;
+}
+input{
+    display: block;
+    width: 100%;
+    margin-top: 0.3rem;
+    height: 50px;
+    font-size:16px;
+    font-weight:500;
+    border: 3px solid rgba(115, 126, 145, 0.7);
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+    padding: 0 1rem;
+    outline: none;
+}
+
+.network{
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}  
+.number{
+    margin-top:2rem;
+    font-weight: 500;
+}
+.amount{
+    margin-top: 2rem;
+    font-weight: 500;
+}
+.btn{
+    display: block;
+    width: 50%;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    padding: 12px 38px;
+    background-color:#0E387A;
+    color:#FFFF;
+    margin:0 auto;
+    margin-top: 3rem;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+}
+.btn:hover {
+    background-color:rgba(4, 56, 122, 0.9);
+}
+a{
+    text-decoration: none;
+}
+.footer{
+    background-color:#0E387A;
+    width: 100%;
+    text-align: center;
+    color:white;
+    padding: 15px 8px;
+}
+
+.footer i{
+    font-size:13px;
+}
+
+@media only screen and (min-width: 310px) and (max-width:580px){
+    .recharge-airtime{
+        max-width:80%;
+        min-height: 100vh;
+        padding-top: 0.2rem;
+    }
+    .container{
+        margin-top: 1.8rem;
+        padding:1.5rem 5%;
+        border-radius: 20px 20px 20px 0;
+    }
+    
+    .home-page{
+    margin-left: 1.5rem;
+    margin-top: 0.3rem;
+}
+    .home-page h5{
+        display: inline;
+        color: #292929;
+        font-size:0.3rem;
+    }
+    
+     .arrow{
+    width: 3px;
+    margin-right: 2px;
+     }
+
+    input{
+        margin-top: 1.5rem;
+    }
+
+}

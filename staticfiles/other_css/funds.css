@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(221, 231, 248);
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.home-page h5 {
+    display: inline;
+    color: #292929;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.arrow {
+    width: 12px;
+    margin-top: -4px;
+    margin-right: 3px;
+}
+
+main {
+    padding: 2rem 4rem 4rem 4rem;
+}
+
+/*forget password*/
+
+.code-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.code {
+    border-radius: 5px;
+    border: 2px solid rgba(115, 126, 145, 0.7);
+    outline: none;
+    margin: 1%;
+    height: 41px;
+    width: 41px;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 18px;
+    -moz-appearance: textfield;
+}
+
+.code::-webkit-outer-spin-button,
+.code::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.code:valid {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
