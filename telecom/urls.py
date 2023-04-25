@@ -31,7 +31,7 @@ urlpatterns = [
     path('', include('appservices.urls')),
     path('auth/', include('appuser.urls')),
     path('subscribe/', include('appnewsletter.urls')),
-    path('20220607_140201.png', RedirectView.as_view(url=static('20220607_140201.png'))),
+    path('20220607_140201.jpg', RedirectView.as_view(url=static('20220607_140201.jpg'))),
 
 ]
 

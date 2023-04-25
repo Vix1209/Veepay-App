@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 def login(request):
     # return HttpResponse('this is the login page')
-    return render(request, 'user/Login.html')
+    return render(request, 'user/login.html')
 
 def login_successful(request):
     # return HttpResponse('this is the login_successful page')
