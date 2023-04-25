@@ -16,10 +16,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.templatetags.static import static # Not from django.conf.urls.static 
+from django.views.generic.base import RedirectView
+
+
+# from django.contrib.staticfiles.storage import staticfiles_storage
+# from django.views.generic.base import RedirectView
+
+# path('20220607_140201.png', RedirectView.as_view(url=staticfiles_storage.url('images/20220607_140201.png')))
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('appservices.urls')),
     path('auth/', include('appuser.urls')),
     path('subscribe/', include('appnewsletter.urls')),
+    path('20220607_140201.png', RedirectView.as_view(url=static('20220607_140201.png'))),
+
 ]
+
+
