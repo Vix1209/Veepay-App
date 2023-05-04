@@ -97,8 +97,8 @@ DATABASES = {
         'NAME' :    'Veepay',
         'USER' :    'postgres',
         'PASSWORD': 'Ucvickazzy01@#/...',
-        'HOST' :    'localhost',
-        'PORT' :    '5432',
+        # 'HOST' :    'localhost',
+        # 'PORT' :    '5432',
     }
 }
 
