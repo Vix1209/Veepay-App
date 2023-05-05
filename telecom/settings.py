@@ -11,10 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-# import mimetypes
-
-# mimetypes.add_type('text/css', '.css', True)
-# mimetypes.add_type('application/javascript', '.js', True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -91,17 +87,33 @@ WSGI_APPLICATION = 'telecom.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default' : {
-        'ENGINE' :  'django.db.backends.postgresql_psycopg2',
-        'NAME' :    'Veepay',
-        'USER' :    'postgres',
-        'PASSWORD': 'Ucvickazzy01@#/...',
-        'HOST' :    'localhost',
-        'PORT' :    '5433',
-    }
-}
 
+
+## localhost postgres not needed... working with postgres generated from render.com #
+# DATABASES = {
+#     'default' : {
+#         'ENGINE' :  'django.db.backends.postgresql_psycopg2',
+#         'NAME' :    'Veepay',
+#         'USER' :    'postgres',
+#         'PASSWORD': 'Ucvickazzy01@#/...',
+#         'HOST' :    'localhost',
+#         'PORT' :    '5433',
+#     }
+# }
+
+## setting up the environment variables
+import environ
+
+env = environ.Env()
+env.read_env()
+
+
+## Render.com postgres service LIVE
+import dj_database_url
+
+DATABASES = {
+    'default' : dj_database_url.parse(env('DATABASE_URL'))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
