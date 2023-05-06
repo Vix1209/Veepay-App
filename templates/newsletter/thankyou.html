@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/20220607_140201.jpg' %}" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/thankyou.css' %}">
+    <script type="text/javascript" src="{% static 'news_JS/fontawesome.min.js' %}"></script>
+    <title>{% block title %}Subscription Successful{% endblock %}</title>
+   
+</head>
+
+{% block content %}
+
+
+
+<header>
+    <img src="{% static 'images/veepay_logo_new.png' %}" alt="veepay logo">
+    <a href="{% url 'newsletter_home' %}"><button>Go back</button></a>
+</header>
+
+<main>
+    <div id="image-div">
+        <img src="{% static 'images/check icon.png' %}" alt="">
+    </div>
+
+    <div>
+        <h1>Thanks for Signing Up!</h1>
+        <p>You'll receive an email within the next 24 hours</p>
+    </div>
+</main>
+
+{% endblock %}
