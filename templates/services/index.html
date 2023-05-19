@@ -19,6 +19,7 @@
 
 
 
+
 </head>
 
 <body>
@@ -545,8 +546,19 @@
 
             <h2 class="my-5">Subscribe to our newsletter</h2>
             <p class="mb-5 fs-5">Veepay is working to give you the best of services. Subscribe to our 
-                <a href="{% url 'newsletter_home' %}">NEWSLETTER</a>
+                NEWSLETTER
                 and Stay tuned for future updates.</p>
+               
+                            <form action="" id="form" method="POST">  
+                                {% csrf_token %}
+                                <label for="email">Sign up to be on the loop.</label>
+                                <div id="input-div">
+                                    <input type="email" id="email" placeholder="Email Address" name='user_email'>
+                                    <input id="button" type="submit" value="Sign Up">
+                                    
+                                </div>
+                            </form>
+                
             <!-- <hr class="w-25 m-auto" style="height: 2px; color: rgb(143, 175, 208);"> -->
             <!-- <h2 class="mb-5 mt-4">Contacts</h2> -->
             <!-- icons -->

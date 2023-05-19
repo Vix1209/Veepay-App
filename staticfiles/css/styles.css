@@ -1,6 +1,7 @@
 body {
     padding: 0;
     margin: 0;
+    /* background-color: whitesmoke; */
 }
 
 header {
@@ -19,7 +20,7 @@ header img {
 
 header button {
     width: 11rem;
-    background-color: rgb(2, 45, 112);
+    background-color: #F4F6FA;
     color: white;
     border: none;
     height: 4.5rem;
@@ -32,29 +33,29 @@ header a{
     height: 4.5rem;
 }
 
-main {
-    background-color: rgb(2, 45, 112);
+ {
+    background-color: whitesmoke;
     color: white;
     display: flex;
     padding: 3rem 0 5rem 0;
 }
 
-main section {
+ section {
     padding: 0 5rem 0 7rem;
     width: 100%;
 }
 
-main img {
+ img {
     width: 100%;
     height: 90%;
 }
 
-main h2 {
+ h2 {
     font-size: 3rem;
     color: orange;
 }
 
-main h1 {
+ h1 {
     font-size: 5.5rem;
     margin-top: 2rem;
     margin-bottom: 4rem;
@@ -62,36 +63,36 @@ main h1 {
     font-family: 'Montserrat', sans-serif;
 }
 
-main p {
+ p {
     display: block;
     font-size: 1.4rem;
     margin-bottom: 4rem;
     line-height: 30px;
 }
 
-main p a {
+ p a {
     color: orange;
     text-decoration: none;
 }
 
-main p a:hover {
+ p a:hover {
     color: rgb(239, 171, 46);
 }
 
-main form label {
+ form label {
     display: block;
     text-align: end;
 }
 
-main form {
+ form {
     width: 100%;
 }
 
-main form label {
+ form label {
     font-size: 1.1rem;
 }
 
-main form #input-div {
+ form #input- {
     display: flex;
     align-items: center;
     height: 5rem;
@@ -114,7 +115,7 @@ main form #input-div {
     background-color: rgb(222, 231, 246);
 }
 
-main #button {
+ #button {
     width: 30%;
     height: 90%;
     border: none;
@@ -127,7 +128,7 @@ main #button {
     color: white;
 }
 
-main #button a {
+ #button a {
     text-decoration: none;
     color: white;
     width: 100%;
@@ -177,7 +178,7 @@ main #button a {
     font-size: 0.9rem;
 }
 
-footer {
+/* footer {
     background-color: rgb(2, 45, 112);
     text-align: center;
     padding-bottom: 3rem;
@@ -189,55 +190,55 @@ footer p {
     font-size: 1rem;
 }
 
-footer div {
+footer  {
     margin-top: 1rem;
 }
 
 footer img {
     margin-right: 2rem;
     margin-bottom: 5rem;
-}
+} */
 
 
 @media (max-width: 1024px) {
-    main section {
+     section {
         padding: 0 3rem 0 5rem;
     }
 }
 
 @media (max-width: 800px) {
-    main h1 {
+     h1 {
         font-size: 4rem;
     }
 
-    main h2 {
+     h2 {
         font-size: 2rem;
     }
 
-    main p {
+     p {
         font-size: 1.2rem;
     }
 
-    main section {
+     section {
         padding: 0 1rem 0 3rem;
     }
 
-    main form #input-div {
+     form #input- {
         height: 4rem;
     }
 
-    main form label {
+     form label {
         text-align: center;
     }
 }
 
 @media (max-width: 600px) {
-    main img {
+     img {
         height: auto;
         margin-top: 9rem;
     }
 
-    main section {
+     section {
         padding: 0 1rem 0 2rem;
     }
 
@@ -248,41 +249,43 @@ footer img {
 }
 
 @media (max-width: 500px) {
-    header {
+    /* header {
         margin: 2rem 0.5rem 0 0.5rem;
     }
 
     header button {
         width: 6rem;
-    }
+    } */
 
-    main {
+     {
         text-align: center;
         display: block;
     }
 
-    main section {
+     section {
         padding: 0 1rem;
         width: 90%;
     }
 
-    main img {
+     img {
         display: none;
     }
 
     #error-message img {
         display: block;
     }
-
+/* 
     footer p{
         font-size: 0.8rem;
     }
-}
+} */
 
-@media (max-width:370px) {
+/* @media (max-width:370px) {
     header img {
         width: 7rem;
         height: 5rem;
         margin: 0;
     }
-}
+} */
+
+

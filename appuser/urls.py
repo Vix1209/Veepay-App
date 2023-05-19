@@ -1,13 +1,13 @@
 from django.urls import path
 from . import views
+from django.contrib.auth import views as auth_views
+
 
 urlpatterns = [
-    path('login/', views.login, name='login'),
+    path('login/', auth_views.LoginView.as_view(template_name = 'user/login.html') , name='login'),
     
     path('login_successful/', views.login_successful, name='login_successful'),
-    
-    path('login_error/', views.login_error, name='login_error'),
-    
+        
     path('signup/', views.signup, name='signup'),
     
     path('signup_successful/', views.signup_successful, name='signup_successful'),

@@ -1,20 +1,29 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 def login(request):
     # return HttpResponse('this is the login page')
+    redirect ('login_successful')
     return render(request, 'user/login.html')
 
 def login_successful(request):
     # return HttpResponse('this is the login_successful page')
     return render(request, 'user/Login_successful.html')
 
-def login_error(request):
-    # return HttpResponse('this is the login_error page')
-    return render(request, 'user/Login_error.html')
-
 def signup(request):
-    # return HttpResponse('this is the signup page')
+    # if request.method == 'POST':
+    #     form =  forms.CreateUserForm(request.POST)
+    #     if form.is_valid():
+    #         form.save()
+    #         staff_name = form.cleaned_data.get('username')
+    #         message = messages.success (request, f'New account successfully created for "{staff_name}", Proceed to login')
+    #         return redirect('user-login')
+    # else:
+    #     form =  forms.CreateUserForm()
+        
+    # context = {
+    #     'form': form,
+    # }
     return render(request, 'user/signup.html')
 
 def signup_successful(request):
