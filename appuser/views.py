@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from .forms import SignUpForm, UserCreationForm
+from django.contrib.auth import authenticate, login
 
 # Create your views here.
 def login(request):
@@ -11,20 +13,27 @@ def login_successful(request):
     return render(request, 'user/Login_successful.html')
 
 def signup(request):
-    # if request.method == 'POST':
-    #     form =  forms.CreateUserForm(request.POST)
-    #     if form.is_valid():
-    #         form.save()
-    #         staff_name = form.cleaned_data.get('username')
-    #         message = messages.success (request, f'New account successfully created for "{staff_name}", Proceed to login')
-    #         return redirect('user-login')
-    # else:
-    #     form =  forms.CreateUserForm()
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid:
+            first_name = form.cleaned_data.get('first_name')
+            last_name = form.cleaned_data.get('last_name')
+            email = form.cleaned_data.get('email')
+            password = form.cleaned_data.get('password1')
+            
+            form.save()
+            new_user = authenticate(first_name = first_name, last_name = last_name, email = email, password = password)
+            if new_user is not None:
+                login(request, new_user)
+                return redirect ('index')
+            
+    else:        
+        form = SignUpForm()
         
-    # context = {
-    #     'form': form,
-    # }
-    return render(request, 'user/signup.html')
+    context = {
+        'form': form
+    }
+    return render(request, 'user/signup.html', context)
 
 def signup_successful(request):
     # return HttpResponse('this is the signup_successful page')
