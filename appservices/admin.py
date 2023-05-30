@@ -15,7 +15,6 @@ admin.site.register(models.sell_to_us)
 admin.site.register(models.SME_data)
 admin.site.register(models.Newsletter, NewsletterAdmin)
 # admin.site.register(MailMessage)
-admin.site.unregister (Group)
 
 admin.site.site_header = 'Veepay Telecommunications'
 

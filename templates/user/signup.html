@@ -37,35 +37,43 @@
                     <hr class="m-auto" style="width: 60px; height: 2.5px; color: rgb(1, 17, 33);">
                 </div>
 
-                <form method="POST" class="pt-3 col-7 m-auto" id="signup-form" novalidate onsubmit="return validatingSignUpForm()">
+                <form method="post" action="." class="pt-3 col-7 m-auto">
                     {% csrf_token %}
+
                     <div class="input-group mb-3">
-                        {{ form.first_name }}
-
+                        {{form.username}}
                     </div>
+                    
                     <div class="input-group mb-3">
-                        {{ form.last_name }}
-
+                        {{form.first_name}}
                     </div>
+                    
                     <div class="input-group mb-3">
-                        {{ form.email }}
-
+                        {{form.last_name}}
                     </div>
+                    
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon5"><i class="bi bi-eye"></i></span>
-                        {{ form.password1 }}
-
+                        {{form.email}}
                     </div>
+                    
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon5"><i class="bi bi-eye"></i></span>
-                        {{ form.password2 }}
-
+                        <span class="input-group-text"><i class="bi bi-eye"></i></span>
+                        {{form.password1}}
                     </div>
-
-
-                    <div class="text-center mt-5">
-                       <input type="submit" class="submit btn-lg w-25 btn-primary" value="Sign Up">
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="bi bi-eye"></i></span>
+                        {{form.password2}}
                     </div>
+                    
+<!-- 
+                    <div class=" mb-3">
+                        {{form.as_p}}
+                    </div> -->
+
+                   
+                    <!-- <input type="submit" class="btn-lg text-center w-25 btn-primary" value="Sign Up"> -->
+                    <button type="submit" class="btn btn-primary btn-lg text-center w-25">Sign Up</button>
                 </form>
                 <div class="col-7 m-auto mt-2 text-center">
                     <div class="d-flex mt-4 align-items-center justify-content-center">
