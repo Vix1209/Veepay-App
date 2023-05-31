@@ -13,12 +13,11 @@ from django.template import loader
 
 def signup(request):
     if request.method == "POST":
-        print ('success')
-
         form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
-            
+            print ('account created')
+
             ##registration successful email
             email = form.cleaned_data.get ('email')
             subject, from_email, to = 'Registration Successful 🎇', 'VEEPAY <veepay.ng@gmail.com>', email
@@ -26,6 +25,7 @@ def signup(request):
             msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
             msg.content_subtype = 'html'
             msg.send()    
+            print ('email sent')
             messages.success(request, "Registration successful." )
 
             return redirect('signup_successful')
