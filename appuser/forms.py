@@ -52,9 +52,20 @@ class SignUpForm (UserCreationForm):
         })
 
     email = forms.EmailField()
-
+    first_name = forms.CharField(max_length = 20)
+    last_name = forms.CharField(max_length = 20)
     
     class Meta:
         model = User
         fields = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
+        
+
+    def clean_username(self):
+        username = self.cleaned_data['username']
+        try:
+            User.objects.get(username=username)
+        except User.DoesNotExist:
+            return username
+        raise forms.ValidationError("That username is already taken, Please try registering by a different username")
+
         
