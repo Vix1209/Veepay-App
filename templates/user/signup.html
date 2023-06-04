@@ -38,8 +38,8 @@
                 </div>
 
                 <form method="post" action="." class="pt-3 col-7 m-auto">
-                    {% csrf_token %}
-                    
+                    {%csrf_token%}
+    
                     <div class="input-group mb-3">
                         {{form.username}}
                     </div>

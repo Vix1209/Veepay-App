@@ -69,3 +69,4 @@ class SignUpForm (UserCreationForm):
         raise forms.ValidationError("That username is already taken, Please try registering by a different username")
 
         
+# class loginForm():

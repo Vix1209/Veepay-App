@@ -1,6 +1,6 @@
 from django.shortcuts import  render, redirect
 from .forms import SignUpForm
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login as auth_login, authenticate
 from django.contrib import messages
 # from django.contrib.auth.models import User
 from django.core.mail import EmailMultiAlternatives
@@ -26,15 +26,14 @@ def signup(request):
             msg.content_subtype = 'html'
             msg.send()    
             print ('email sent')
-            messages.success(request, "Registration successful." )
+            message = messages.success(request, "Registration successful." )
 
             return redirect('signup_successful')
-        messages.error(request, "Unsuccessful registration. Invalid information.")
+        message = messages.error(request, "Unsuccessful registration. Invalid information.")
 
           
     else:
         form = SignUpForm()
-        print('denied')
         
     context = {
         'form': form,
@@ -52,20 +51,22 @@ def login(request):
     if request.method == 'POST':
       
         # AuthenticationForm_can_also_be_used__
-  
-        username = request.POST['username']
-        email = request.POST['email']
+        print ('set')
+        Username = request.POST['username']
         password = request.POST['password']
-        user = authenticate(request, email = email, password = password)
+        user = authenticate(request, username = Username, password = password)
         if user is not None:
-            form = login(request, user)
-            messages.success(request, f' welcome {username} !!')
+            form = auth_login(request, user)
+            messages.success(request, f' welcome {Username}!!')
             return redirect('login_successful')
         else:
-            messages.info(request, f'account done not exit plz sign in')
+            messages.info(request, f'Account does not exist')
     
     form = AuthenticationForm()
-    context = {'form':form}
+    context = {
+        'form':form
+        }
+        
     return render(request, 'user/login.html', context)
 
 
