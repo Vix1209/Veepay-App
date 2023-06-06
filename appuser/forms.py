@@ -1,12 +1,12 @@
 from django import forms 
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 
 
 class SignUpForm (UserCreationForm):
     
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(SignUpForm, self).__init__(*args, **kwargs)
        
         self.fields ['username'].widget.attrs.update({
             'required': '',
@@ -68,5 +68,23 @@ class SignUpForm (UserCreationForm):
             return username
         raise forms.ValidationError("That username is already taken, Please try registering by a different username")
 
+
+
+
+
+
         
-# class loginForm():
+class loginForm(AuthenticationForm):
+
+        
+    # username = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control form-control-lg w-100 username', 'required': '', 'placeholder':'Username', 'type':'text', 'aria-label':'Username', 'id': 'validationServer03'}))
+    # password = forms.CharField(widget=forms.PasswordInput(attrs={ 'class':'password-input form-control form-control-lg', 'required': '', 'placeholder':'Password', 'type':'password', 'aria-label':'password',}))
+    
+    # I attached the attributes above, straight up into the django authentication form. It wasn't being parsed from the codebase above. 
+    class Meta:
+        model = User,
+        fields = ('username', 'password')
+        
+        
+
+    

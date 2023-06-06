@@ -52,12 +52,12 @@ def login(request):
       
         # AuthenticationForm_can_also_be_used__
         print ('set')
-        Username = request.POST['username']
+        username = request.POST['username']
         password = request.POST['password']
-        user = authenticate(request, username = Username, password = password)
+        user = authenticate(request, username = username, password = password)
         if user is not None:
             form = auth_login(request, user)
-            messages.success(request, f' welcome {Username}!!')
+            messages.success(request, f' welcome {username}!!')
             return redirect('login_successful')
         else:
             messages.info(request, f'Account does not exist')
