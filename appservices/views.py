@@ -101,6 +101,10 @@ def settings(request):
     return render(request, 'services/settings.html')
     # return HttpResponse('this is the settings page')
 
+def about(request):
+    return render(request, 'services/aboutus.html')
+    # return HttpResponse('this is the settings page')
+
 
 def thanks(request):
     return render(request, 'newsletter/thankyou.html')

@@ -6,6 +6,8 @@ urlpatterns = [
     
     path('cable/', views.cable, name='cable'),
        
+    path('about/', views.about, name='about'),
+       
     path('bulk-SMS/', views.bulk_sms, name='bulk_sms'),
     
     path('airtime/', views.airtime, name='airtime'),

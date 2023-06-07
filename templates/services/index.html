@@ -37,12 +37,29 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            {% if user.is_authenticated %}
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 justify-content-between my-2">
+                    <li class="nav-item me-5 rounded"><a class="nav-link fs-5 px-5 text-white btn btn-primary border-2"
+                            href="{% url 'about' %}">About Us</a></li>
+                    <li class="nav-item fs-5 me-5"><a href="{% url 'settings' %}"
+                            class="btn fs-5 px-5 btn-outline-primary last-btn">Settings</a></li>
+                </ul>
+            </div>
+            
+            {% else %}
+
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 justify-content-between my-2">
                     <li class="nav-item me-5 rounded"><a href="{% url 'login' %}" class="nav-link fs-5 px-5 text-white btn btn-primary border-2">Login</a></li>
                     <li class="nav-item fs-5 me-5"><a href="{% url 'signup' %}" class="btn fs-5 px-5 btn-outline-primary last-btn">Sign Up</a></li>
                 </ul>
             </div>
+
+            {% endif %}
+            
+        
         </div>
     </nav>
 
