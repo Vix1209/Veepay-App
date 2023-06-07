@@ -1,23 +1,38 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/x-scss" href="{% static 'main/main.scss' %}"     rel="stylesheet" media="screen">
-    <title>Document</title>
-    <script src="https://kit.fontawesome.com/1f82d44a3d.js" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/20220607_140201.jpg' %}" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/thankyou.css' %}">
+    <script type="text/javascript" src="{% static 'news_JS/fontawesome.min.js' %}"></script>
+    <title>{% block title %}Registration Successful{% endblock %}</title>
+   
 </head>
-<body>
-    <nav class="navbar">
-        <ul>
-            <i class="fa-solid fa-circle-check"  style="font-size:34px;"></i>
-        </ul>
-        </nav>
-</body>
-    <h1>Login successful</h1>
-    <h5> Explore!</h5>
-</body>
-</html>
+
+{% block content %}
+
+
+
+<header>
+    <img src="{% static 'images/veepay_logo_new.png' %}" alt="veepay logo">
+</header>
+
+<main>
+    <div id="image-div">
+        <img src="{% static 'images/check icon.png' %}" alt="">
+    </div>
+
+    <div>
+         <h1>Login Successful</h1>
+        <p>
+            <a href="{% url 'index' %}"><img style="width: 65px; height:auto"  src="{% static '/images/arrow-right-circle-fill.svg' %}" alt=""></a>
+        </p>
+    </div>
+</main>
+
+{% endblock %}

@@ -74,16 +74,16 @@ class SignUpForm (UserCreationForm):
 
 
         
-class loginForm(AuthenticationForm):
+# class loginForm(AuthenticationForm):
 
         
-    # username = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control form-control-lg w-100 username', 'required': '', 'placeholder':'Username', 'type':'text', 'aria-label':'Username', 'id': 'validationServer03'}))
-    # password = forms.CharField(widget=forms.PasswordInput(attrs={ 'class':'password-input form-control form-control-lg', 'required': '', 'placeholder':'Password', 'type':'password', 'aria-label':'password',}))
+#     # username = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control form-control-lg w-100 username', 'required': '', 'placeholder':'Username', 'type':'text', 'aria-label':'Username', 'id': 'validationServer03'}))
+#     # password = forms.CharField(widget=forms.PasswordInput(attrs={ 'class':'password-input form-control form-control-lg', 'required': '', 'placeholder':'Password', 'type':'password', 'aria-label':'password',}))
     
-    # I attached the attributes above, straight up into the django authentication form. It wasn't being parsed from the codebase above. 
-    class Meta:
-        model = User,
-        fields = ('username', 'password')
+#     # I attached the attributes above, straight up into the django authentication form. It wasn't being parsed from the codebase above. 
+#     class Meta:
+#         model = User,
+#         fields = ('username', 'password')
         
         
 
