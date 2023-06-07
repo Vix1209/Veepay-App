@@ -13,7 +13,6 @@ urlpatterns = [
     
         # this have django default auth view
     path('login/', views.login, name='login'),
-    # path('login/', auth_views.LoginView.as_view(template_name = 'user/login.html') , name= 'login'),
 
     path('login_successful/', views.login_successful, name='login_successful'),
 
