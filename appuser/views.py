@@ -64,6 +64,9 @@ def login_successful(request):
     # return HttpResponse('this is the login_successful page')
     return render(request, 'user/Login_successful.html')
 
+def logout (request):
+    return render (request, 'user/logout.html')
+
 def reset_password(request):
     # return HttpResponse('this is the reset_password page')
     return render(request, 'user/forget-password1.html')

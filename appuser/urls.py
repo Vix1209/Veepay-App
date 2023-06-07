@@ -16,7 +16,8 @@ urlpatterns = [
 
     path('login_successful/', views.login_successful, name='login_successful'),
 
-    path('logout/', auth_views.LogoutView.as_view(template_name = 'user/logout.html'), name= 'logout'),
+    # path('logout/', auth_views.LogoutView.as_view(template_name = 'user/logout.html'), name= 'logout'),
+    path('logout/', views.logout, name = 'logout'),
   
   
         # password reset    
