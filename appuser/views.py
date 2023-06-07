@@ -2,11 +2,7 @@ from django.shortcuts import  render, redirect
 from .forms import SignUpForm
 from django.contrib.auth import login as auth_login, authenticate
 from django.contrib import messages
-# from django.contrib.auth.models import User
 from django.core.mail import EmailMultiAlternatives
-from django.template.loader import get_template
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import AuthenticationForm
 from django.template import loader
 
 # Create your views here.
@@ -44,30 +40,24 @@ def signup(request):
 
 
 def signup_successful(request):
-    # return HttpResponse('this is the signup_successful page')
     return render(request, 'user/Signup_successful.html')
+
+
 
 def login(request): 
     if request.method == 'POST':
-      
-        # AuthenticationForm_can_also_be_used__
-        print ('set')
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(request, username = username, password = password)
+        user_name = request.POST['login-username']
+        user_password = request.POST['login-password']
+        user = authenticate(username = user_name, password = user_password)
+        
         if user is not None:
-            form = auth_login(request, user)
-            messages.success(request, f' welcome {username}!!')
+            auth_login(request, user)
             return redirect('login_successful')
         else:
-            messages.info(request, f'Account does not exist')
-    
-    form = AuthenticationForm()
-    context = {
-        'form':form
-        }
-        
-    return render(request, 'user/login.html', context)
+            messages.error(request, f'Account does not exist')  
+
+    return render(request, 'user/login.html') #, context)
+
 
 
 def login_successful(request):
