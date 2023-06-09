@@ -29,9 +29,7 @@ urlpatterns = [
     path('selltous/', views.selltous, name='selltous'),
     
     path('withdraw/', views.withdraw, name='withdraw'),
-    
-    path('settings/', views.settings, name='settings'),
-    
+        
     path('success/', views.thanks, name = 'newsletter_thanks'),
 
 ]

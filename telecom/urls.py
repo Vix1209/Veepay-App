@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.templatetags.static import static # Not from django.conf.urls.static 
 from django.views.generic.base import RedirectView
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 # from django.contrib.staticfiles.storage import staticfiles_storage
 # from django.views.generic.base import RedirectView
@@ -29,9 +30,10 @@ from django.views.generic.base import RedirectView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('appservices.urls')),
-    path('auth/', include('appuser.urls')),
+    path('accounts/', include('appuser.urls')),
     path('20220607_140201.jpg', RedirectView.as_view(url=static('20220607_140201.jpg'))),
 
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
 
 
