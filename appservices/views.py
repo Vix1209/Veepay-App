@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-# from django.http import HttpResponse, 
 from django.contrib.auth.decorators import login_required
 from django.core.mail import EmailMultiAlternatives
 from django.template import loader
@@ -97,10 +96,9 @@ def withdraw(request):
     return render(request, 'services/withdraw.html')
     # return HttpResponse('this is the withdraw page')
 
-def settings(request):
-    return render(request, 'services/settings.html')
-    # return HttpResponse('this is the settings page')
 
+
+@login_required
 def about(request):
     return render(request, 'services/aboutus.html')
     # return HttpResponse('this is the settings page')
