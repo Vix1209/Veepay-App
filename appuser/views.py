@@ -1,11 +1,12 @@
 from django.shortcuts import  render, redirect
-from .forms import SignUpForm
+from .forms import SignUpForm, ProfileUpdateForm, UserUpdateForm
 from django.contrib.auth import login as auth_login, authenticate, logout as auth_logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.core.mail import EmailMultiAlternatives
 from django.template import loader
 from django.contrib.auth.decorators import login_required
+
 
 
 # Create your views here.
@@ -110,5 +111,25 @@ def enter_new_login_details(request):
 
 @login_required
 def settings(request):
-    return render(request, 'user/settings.html')
+    if request.method == 'POST':
+        user_form = UserUpdateForm(request.POST, instance = request.user)
+        profile_form = ProfileUpdateForm(request.POST, request.FILES, instance = request.user.profile)
+    
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            message = messages.success(request, 'Profile Updated Successfully')
+            return redirect ('settings')
+        
+    else:
+        user_form = UserUpdateForm(instance = request.user)
+        profile_form = ProfileUpdateForm (instance = request.user.profile)
+        # message = messages.error(request, 'An error occured, try again')
+        
+    context = {
+        'user_form': user_form,
+        'profile_form': profile_form,
+        # 'message' : message
+    }
+    return render(request, 'user/settings.html', context)
     # return HttpResponse('this is the settings page')
