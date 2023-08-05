@@ -1,0 +1,64 @@
+<div class="">
+    <span class=" d-inline-block p-1 ms-1 mb-3" >
+        <img class="img-thumbnail" style="width:110px; height:auto" src="{{ user.profile.image.url }}" alt="">
+    
+    </span>
+    <!-- {{user.profile.image}} -->
+    {{profile_form.image}}
+    <!-- <input type="file" name="image" accept="image/*" id="id_image"> -->
+</div>
+<div class="row g-5 justify-content-start mt-1 mb-4 align-items-center">
+    <div class="col-5">
+        <label for="floatingInputValue5">Username</label>
+        <div class="d-flex align-items-center  form-floating">
+            
+            {{user_form.username}}
+            <!-- <input type="text" class="form-control me-3" placeholder="Username"
+                value="{{user_form.username}}" id="floatingInputValue1" aria-label="Username" disabled>
+                 -->
+            <i class="bi bi-pen ms-3"></i>
+
+        </div>
+
+    </div>
+    <div class="col-5">
+        <label for="floatingInputValue1">First Name</label> 
+        <div class="d-flex align-items-center me-4 form-floating">
+            {{user_form.first_name}}
+            <!-- <input type="text" class="form-control me-3" placeholder="First name"
+                value="{{user_form.first_name}}" id="floatingInputValue1" aria-label="First name" disabled>
+                -->
+            <i class="bi bi-pen ms-3"></i>
+
+        </div>
+    </div>
+    
+</div>
+
+<div class="row g-5 justify-content-start mb-4 align-items-center">
+    <div class="col-5">
+        <label for="floatingInputValue2">Last Name</label>
+        <div class="d-flex align-items-center form-floating">
+            {{user_form.last_name}}
+            <!-- <input type="text" class="form-control me-3" placeholder="Last name"
+                value="{{user_form.last_name}}" id="floatingInputValue2" aria-label="Last name" disabled>
+                
+             -->
+            <i class="bi bi-pen ms-3"></i>
+
+        </div>
+    </div>
+    <div class="col-5">
+        <!-- <label for="floatingInputValue3">Email address</label> -->
+        <div class="d-flex align-items-center me-4 form-floating">
+            <!-- {{user.email}} -->
+            <input type="text" class="form-control"
+                value="{{user.email}}" id="floatingInputValue3"
+                aria-label=" First name" disabled>
+                <label for="floatingInputValue3">Email address</label>
+
+            
+        
+        </div>
+    </div>
+</div>
