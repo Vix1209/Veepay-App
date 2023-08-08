@@ -51,6 +51,7 @@ def signup(request):
                   
     else:
         form = SignUpForm()
+        # message= messages.error(request, f'Account does not exist') 
         
     context = {
         'form': form,

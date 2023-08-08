@@ -63,13 +63,13 @@
                 <div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel"
                     aria-labelledby="profile-tab" tabindex="0">
                     
-                    {% for message in messages %}
+                    <!-- {% for message in messages %} -->
                     {% if message %}
                     <div class="alert alert-{{ message.tags }}">
                         {{ message }}
                     </div>
                     {% endif %}
-                    {% endfor %}
+                    <!-- {% endfor %} -->
 
                     <div class="profile">
                         <form method="post" class="profile1 mb-3">
@@ -83,18 +83,23 @@
                                     <img class="img-thumbnail" style="width:110px; height:auto" src="{{ user.profile.image.url }}" alt="">
                                 
                                 </span>
-                                <i class="bi bi-camera-fill text-warning mt-0"></i>
+                                <!-- {{user.profile.image}} -->
+                                {{profile_form.image}}
+                                <!-- <input type="file" name="image" accept="image/*" id="id_image"> -->
                             </div>
-                            <div class="row g-5 justify-content-start mb-4 align-items-center">
+                            <div class="row g-5 justify-content-start mt-1 mb-4 align-items-center">
                                 <div class="col-5">
                                     <label for="floatingInputValue5">Username</label>
-                                    <div class="d-flex align-items-center me-4 form-floating">
+                                    <div class="d-flex align-items-center  form-floating">
                                         
                                         {{user_form.username}}
                                         <!-- <input type="text" class="form-control me-3" placeholder="Username"
                                             value="{{user_form.username}}" id="floatingInputValue1" aria-label="Username" disabled>
                                              -->
+                                        <i class="bi bi-pen ms-3"></i>
+
                                     </div>
+
                                 </div>
                                 <div class="col-5">
                                     <label for="floatingInputValue1">First Name</label> 
@@ -103,7 +108,8 @@
                                         <!-- <input type="text" class="form-control me-3" placeholder="First name"
                                             value="{{user_form.first_name}}" id="floatingInputValue1" aria-label="First name" disabled>
                                             -->
-                                    
+                                        <i class="bi bi-pen ms-3"></i>
+
                                     </div>
                                 </div>
                                 
@@ -118,18 +124,20 @@
                                             value="{{user_form.last_name}}" id="floatingInputValue2" aria-label="Last name" disabled>
                                             
                                          -->
-                                    
+                                        <i class="bi bi-pen ms-3"></i>
+
                                     </div>
                                 </div>
                                 <div class="col-5">
-                                    <label for="floatingInputValue3">Email address</label>
+                                    <!-- <label for="floatingInputValue3">Email address</label> -->
                                     <div class="d-flex align-items-center me-4 form-floating">
-                                        {{user_form.email}}
-                                        <!-- <input type="text" class="form-control me-3"
-                                            value="{{user_form.email}}" id="floatingInputValue3"
+                                        <!-- {{user.email}} -->
+                                        <input type="text" class="form-control"
+                                            value="{{user.email}}" id="floatingInputValue3"
                                             aria-label=" First name" disabled>
-                                            
-                                         -->
+                                            <label for="floatingInputValue3">Email address</label>
+
+                                        
                                     
                                     </div>
                                 </div>
@@ -143,7 +151,8 @@
                                             value="{{profile_form.phone}}" id="floatingInputValue4" disabled> -->
                                                         
                                          {{profile_form.phone}}
-                                    
+                                         <i class="bi bi-pen ms-3"></i>
+
                                     </div>
                                 </div>
 
