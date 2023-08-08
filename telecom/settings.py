@@ -87,30 +87,29 @@ WSGI_APPLICATION = 'telecom.wsgi.application'
 
 
 
-## localhost postgres not needed... working with postgres generated from render.com #
-# DATABASES = {
-#     'default' : {
-#         'ENGINE' :  'django.db.backends.postgresql_psycopg2',
-#         'NAME' :    'Veepay',
-#         'USER' :    'postgres',
-#         'PASSWORD': 'Ucvickazzy01@#/...',
-#         'HOST' :    'localhost',
-#         'PORT' :    '5432',
-#     }
-# }
+DATABASES = {
+    'default' : {
+        'ENGINE' :  'django.db.backends.postgresql_psycopg2',
+        'NAME' :    'Veepay',
+        'USER' :    'postgres',
+        'PASSWORD': 'Ucvickazzy01@#/...',
+        'HOST' :    'localhost',
+        'PORT' :    '5432',
+    }
+}
 
 ## setting up the environment variables
-import environ
+# import environ
 
-env = environ.Env()
-env.read_env()
+# env = environ.Env()
+# env.read_env()
 
-## Render.com postgres service LIVE
-import dj_database_url
+# ## Render.com postgres service LIVE
+# import dj_database_url
 
-DATABASES = {
-    'default' : dj_database_url.parse(env('DATABASE_URL'))
-}
+# DATABASES = {
+#     'default' : dj_database_url.parse(env('DATABASE_URL'))
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
