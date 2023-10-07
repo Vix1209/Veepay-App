@@ -72,30 +72,29 @@
                     <!-- {% endfor %} -->
 
                     <div class="profile">
-                        <form method="post" class="profile1 mb-3">
-                            {% csrf_token %}
-
+                        <form method="post" enctype="multipart/form-data" class="profile1 mb-3">
                             <div>
                                 <h4 class="text-primary mb-4">User Info</h4>
                             </div>
-                            <div class="">
-                                <span class=" d-inline-block p-1 ms-1 mb-3" >
-                                    <img class="img-thumbnail" style="width:110px; height:auto" src="{{ user.profile.image.url }}" alt="">
-                                
-                                </span>
-                                <!-- {{user.profile.image}} -->
+
+                            {% csrf_token %}
+                            
+                            
+                            <span class=" d-inline-block p-1 ms-1 mb-3" >
+                                <img class="imgthumbnail" style="width:110px; height:auto" src="{{ user.profile.image.url }}" alt="">
+                                <br>
+                                <br>
+                            
                                 {{profile_form.image}}
-                                <!-- <input type="file" name="image" accept="image/*" id="id_image"> -->
-                            </div>
+                                
+                            </span>
+                            
                             <div class="row g-5 justify-content-start mt-1 mb-4 align-items-center">
                                 <div class="col-5">
                                     <label for="floatingInputValue5">Username</label>
                                     <div class="d-flex align-items-center  form-floating">
                                         
                                         {{user_form.username}}
-                                        <!-- <input type="text" class="form-control me-3" placeholder="Username"
-                                            value="{{user_form.username}}" id="floatingInputValue1" aria-label="Username" disabled>
-                                             -->
                                         <i class="bi bi-pen ms-3"></i>
 
                                     </div>
@@ -105,9 +104,6 @@
                                     <label for="floatingInputValue1">First Name</label> 
                                     <div class="d-flex align-items-center me-4 form-floating">
                                         {{user_form.first_name}}
-                                        <!-- <input type="text" class="form-control me-3" placeholder="First name"
-                                            value="{{user_form.first_name}}" id="floatingInputValue1" aria-label="First name" disabled>
-                                            -->
                                         <i class="bi bi-pen ms-3"></i>
 
                                     </div>
@@ -120,10 +116,6 @@
                                     <label for="floatingInputValue2">Last Name</label>
                                     <div class="d-flex align-items-center form-floating">
                                         {{user_form.last_name}}
-                                        <!-- <input type="text" class="form-control me-3" placeholder="Last name"
-                                            value="{{user_form.last_name}}" id="floatingInputValue2" aria-label="Last name" disabled>
-                                            
-                                         -->
                                         <i class="bi bi-pen ms-3"></i>
 
                                     </div>
@@ -136,9 +128,6 @@
                                             value="{{user.email}}" id="floatingInputValue3"
                                             aria-label=" First name" disabled>
                                             <label for="floatingInputValue3">Email address</label>
-
-                                        
-                                    
                                     </div>
                                 </div>
                             </div>
@@ -147,9 +136,6 @@
                                 <div class="col-5">
                                     <label for="floatingInputValue4">Phone No.</label>
                                     <div class="d-flex align-items-center form-floating">
-                                        <!-- <input type="text" class="form-control me-3" aria-label="First name"
-                                            value="{{profile_form.phone}}" id="floatingInputValue4" disabled> -->
-                                                        
                                          {{profile_form.phone}}
                                          <i class="bi bi-pen ms-3"></i>
 
@@ -157,13 +143,17 @@
                                 </div>
 
                                 <div class="col-5">
-                                    <button type="submit" class="btn btn-primary  py-2 d-inline-block rounded-lg"
-                                        style="padding-left: 5rem; padding-right: 5rem;">Update</button>
+                                    <button type="submit" class="btn btn-primary  py-2 d-inline-block rounded-lg" style="padding-left: 5rem; padding-right: 5rem;">
+                                       Update
+                                    </button>
                                 </div>
                             </div>
 
                         </form>
 
+
+
+                        
                         <div class="profile1 mb-3">
                             <div>
                                 <h4 class="text-primary mb-4">Account</h4>
