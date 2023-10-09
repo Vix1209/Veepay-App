@@ -6,8 +6,7 @@ from django.contrib import messages
 from django.core.mail import EmailMultiAlternatives
 from django.template import loader
 from django.contrib.auth.decorators import login_required
-
-
+from .utils import generate_otp, send_otp_email
 
 # Create your views here.
 
@@ -91,12 +90,29 @@ def logout (request):
 
 
 def reset_password(request):
-    # return HttpResponse('this is the reset_password page')
+    if request.method == 'POST':
+        email = request.POST.get('OTP_email')
+        otp = generate_otp()
+        # Store the OTP in the database or session for verification
+        request.session['otp'] = otp
+        send_otp_email(email, otp)
+        print ('OTP SENT SUCCESSFULLY')
+        return redirect ('OTP')
+    
     return render(request, 'user/forget-password1.html')
-
-
+              
+              
 def OTP(request):
-    # return HttpResponse('this is the OTP page')
+    if request.method == 'POST':
+        user_input_otp = request.POST.get('otp')
+        stored_otp = request.session.get('otp')
+        if user_input_otp == stored_otp:
+            print ('verification successful')
+            return redirect ('change_password')
+        else:
+            print ('wrong OTP')
+            messages.error(request, f'Wrong OTP, TRY AGAIN')  
+            return redirect ('OTP')
     return render(request, 'user/forget-password2.html')
 
 
@@ -106,7 +122,7 @@ def change_password(request):
 
 
 def enter_new_login_details(request):
-    # return HttpResponse('this is the change_password page')
+#     # return HttpResponse('this is the change_password page')
     return render(request, 'user/forget-password4.html')
 
 

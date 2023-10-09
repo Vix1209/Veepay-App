@@ -94,4 +94,7 @@ class ProfileUpdateForm (forms.ModelForm):
         model = Profile
         fields = ['phone', 'image']
         
+
+# class OtpForm (forms.ModelForm):
+    
         
